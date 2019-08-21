@@ -20,7 +20,7 @@ skip_render: vendor/**
 theme: navy
 deploy:
   type: git
-  repo: git@github.com:khadas/khadas.github.io.git
+  repo: git@github.com:frank180/frank180.github.io.git
   branch: master
 
 highlight:
