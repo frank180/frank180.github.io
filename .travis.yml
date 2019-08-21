@@ -24,8 +24,8 @@ script:
   - hexo g
 
 branches:
-    only:
-      - blog
+  only:
+    - blog
 
 env:
   global: 
