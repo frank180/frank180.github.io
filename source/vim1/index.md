@@ -1,4 +1,4 @@
-title: VIM1 Beginners Guide && TEST
+title: VIM1 Beginners Guide
 ---
 
 # VIM1 Power Supply
