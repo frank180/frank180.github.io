@@ -1,0 +1,32 @@
+language: node_js
+
+node_js:
+  - 8.9.0
+
+install:
+  - npm install
+  - npm rebuild node-sass --force
+
+scrpit:
+  - hexo clean
+  - hexo g
+
+before_install:
+  - export TZ='Asia/Shanghai' # 更改时区
+  - npm install hexo-cli -g  # 安装hexo环境
+  - chmod +x ./publish-to-gh-pages.sh  # 为shell文件添加可执行权限
+
+after_script:
+  - ./publish-to-gh-pages.sh
+
+script:
+  - hexo clean
+  - hexo g
+
+branches:
+    only:
+      - blog
+
+env:
+  global: 
+    - GH_REF: github.com/frank180/frank180.github.io
