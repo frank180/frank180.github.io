@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>如何使用WiringPi | Khadas Docs</title><meta name="generator" content="Hexo 3.9.0">
+  <title>如何使用WiringPi | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -60,17 +60,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="什么是 WiringPiWiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。 开始使用wiringPi控制命令 运行 gpio -h, 你可以看到所有可以关于WiringPi的相关的命令 gpio: Usage: gpio -vgpio -hgpio [-g|-1] ...gpio [-">
+  <meta name="description" content="什么是 WiringPiWiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。 开始使用wiringPi控制命令 运行 gpio -h, 你可以看到所有可以关于WiringPi的相关的命令gpio: Usage: gpio -vgpio -hgpio [-g|-1] ...gpio [-d">
 <meta property="og:type" content="website">
 <meta property="og:title" content="如何使用WiringPi">
-<meta property="og:url" content="https://docs.khadas.com/zh-cn/vim1/HowToUseWiringPi.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;zh-cn&#x2F;vim1&#x2F;HowToUseWiringPi.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="什么是 WiringPiWiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。 开始使用wiringPi控制命令 运行 gpio -h, 你可以看到所有可以关于WiringPi的相关的命令 gpio: Usage: gpio -vgpio -hgpio [-g|-1] ...gpio [-">
+<meta property="og:description" content="什么是 WiringPiWiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。 开始使用wiringPi控制命令 运行 gpio -h, 你可以看到所有可以关于WiringPi的相关的命令gpio: Usage: gpio -vgpio -hgpio [-g|-1] ...gpio [-d">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-08-21T09:54:38.232Z">
+<meta property="article:published_time" content="2019-11-01T04:40:32.157Z">
+<meta property="article:modified_time" content="2019-11-01T04:40:32.157Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何使用WiringPi">
-<meta name="twitter:description" content="什么是 WiringPiWiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。 开始使用wiringPi控制命令 运行 gpio -h, 你可以看到所有可以关于WiringPi的相关的命令 gpio: Usage: gpio -vgpio -hgpio [-g|-1] ...gpio [-">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -95,7 +95,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link current">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -130,45 +130,31 @@
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">如何使用WiringPi</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/HowToUseWiringPi.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim1/HowToUseWiringPi.md" target="_blank" rel="noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h3 id="什么是-WiringPi" class="article-heading"><a href="#什么是-WiringPi" class="headerlink" title="什么是 WiringPi"></a>什么是 WiringPi<a class="article-anchor" href="#什么是-WiringPi" aria-hidden="true"></a></h3><p>WiringPi 是一个基于C语言的GPIO引脚控制库。原本是开发被运用于树莓派上，现在我们移植到了VIMs上。可以通过WiringPi控制板子上40pin的引脚。</p>
 <h3 id="开始使用wiringPi" class="article-heading"><a href="#开始使用wiringPi" class="headerlink" title="开始使用wiringPi"></a>开始使用wiringPi<a class="article-anchor" href="#开始使用wiringPi" aria-hidden="true"></a></h3><h4 id="控制命令" class="article-heading"><a href="#控制命令" class="headerlink" title="控制命令"></a>控制命令<a class="article-anchor" href="#控制命令" aria-hidden="true"></a></h4><ul>
-<li><p>运行 <code>gpio -h</code>, 你可以看到所有可以关于WiringPi的相关的命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gpio: Usage: gpio -v</span><br><span class="line">gpio -h</span><br><span class="line">gpio [-g|-1] ...</span><br><span class="line">gpio [-d] ...</span><br><span class="line">[-x extension:params] [[ -x ...]] ...</span><br><span class="line">gpio [-p] &lt;read/write/wb&gt; ...</span><br><span class="line">gpio &lt;mode/read/write/aread/awritewb/pwm/pwmTone/clock&gt; ...</span><br><span class="line">gpio &lt;toggle/blink&gt; &lt;pin&gt;</span><br><span class="line">gpio readall</span><br><span class="line">gpio unexportall/exports</span><br><span class="line">gpio export/edge/unexport ...</span><br><span class="line">gpio wfi &lt;pin&gt; &lt;mode&gt;</span><br><span class="line">gpio drive &lt;group&gt; &lt;value&gt;</span><br><span class="line">gpio pwm-bal/pwm-ms </span><br><span class="line">gpio pwmr &lt;range&gt; </span><br><span class="line">gpio pwmc &lt;divider&gt; </span><br><span class="line">gpio load spi/i2c</span><br><span class="line">gpio unload spi/i2c</span><br><span class="line">gpio i2cd/i2cdetect</span><br><span class="line">gpio rbx/rbd</span><br><span class="line">gpio wb &lt;value&gt;</span><br><span class="line">gpio usbp high/low</span><br><span class="line">gpio gbr &lt;channel&gt;</span><br><span class="line">gpio gbw &lt;channel&gt; &lt;value&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行 <code>gpio readall</code>, 可以看到所有引脚相关的状态和信息<br>你会看到一个有很多栏目的表格，下面是主要栏目的注解</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GPIO  --&gt; GPIO的实际引脚</span><br><span class="line">wPi   --&gt; WiringPi引脚值</span><br><span class="line">Mode  --&gt; 引脚的模式 ,`ALT`说明引脚已经被配置成特殊的功能</span><br><span class="line">V     --&gt; 1表示引脚是高电平，0表示引脚是低电平</span><br><span class="line">PU/PD --&gt; PU:上拉 PD:下拉 DSBLD:已关闭上下拉</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="通过命令行控制" class="article-heading"><a href="#通过命令行控制" class="headerlink" title="通过命令行控制"></a>通过命令行控制<a class="article-anchor" href="#通过命令行控制" aria-hidden="true"></a></h4><p>这里的简单例子是通过wpi的1号引脚实现的。</p>
-<ul>
+<li>运行 <code>gpio -h</code>, 你可以看到所有可以关于WiringPi的相关的命令<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gpio: Usage: gpio -v</span><br><span class="line">gpio -h</span><br><span class="line">gpio [-g|-1] ...</span><br><span class="line">gpio [-d] ...</span><br><span class="line">[-x extension:params] [[ -x ...]] ...</span><br><span class="line">gpio [-p] &lt;read/write/wb&gt; ...</span><br><span class="line">gpio &lt;mode/read/write/aread/awritewb/pwm/pwmTone/clock&gt; ...</span><br><span class="line">gpio &lt;toggle/blink&gt; &lt;pin&gt;</span><br><span class="line">gpio readall</span><br><span class="line">gpio unexportall/exports</span><br><span class="line">gpio export/edge/unexport ...</span><br><span class="line">gpio wfi &lt;pin&gt; &lt;mode&gt;</span><br><span class="line">gpio drive &lt;group&gt; &lt;value&gt;</span><br><span class="line">gpio pwm-bal/pwm-ms </span><br><span class="line">gpio pwmr &lt;range&gt; </span><br><span class="line">gpio pwmc &lt;divider&gt; </span><br><span class="line">gpio load spi/i2c</span><br><span class="line">gpio unload spi/i2c</span><br><span class="line">gpio i2cd/i2cdetect</span><br><span class="line">gpio rbx/rbd</span><br><span class="line">gpio wb &lt;value&gt;</span><br><span class="line">gpio usbp high/low</span><br><span class="line">gpio gbr &lt;channel&gt;</span><br><span class="line">gpio gbw &lt;channel&gt; &lt;value&gt;</span><br></pre></td></tr></table></figure></li>
+<li>运行 <code>gpio readall</code>, 可以看到所有引脚相关的状态和信息<br>你会看到一个有很多栏目的表格，下面是主要栏目的注解<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">GPIO  --&gt; GPIO的实际引脚</span><br><span class="line">wPi   --&gt; WiringPi引脚值</span><br><span class="line">Mode  --&gt; 引脚的模式 ,`ALT`说明引脚已经被配置成特殊的功能</span><br><span class="line">V     --&gt; 1表示引脚是高电平，0表示引脚是低电平</span><br><span class="line">PU/PD --&gt; PU:上拉 PD:下拉 DSBLD:已关闭上下拉</span><br></pre></td></tr></table></figure>
+<h4 id="通过命令行控制" class="article-heading"><a href="#通过命令行控制" class="headerlink" title="通过命令行控制"></a>通过命令行控制<a class="article-anchor" href="#通过命令行控制" aria-hidden="true"></a></h4>这里的简单例子是通过wpi的1号引脚实现的。</li>
 <li>运行 <code>gpio mode 1 out</code><br>wpi的1号引脚被设置成了输出模式。</li>
-<li><p>运行 <code>gpio read 1</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~# gpio read 1</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行 <code>gpio write 1 0</code> 改变引脚的输出值</p>
-</li>
+<li>运行 <code>gpio read 1</code><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~# gpio read 1</span><br><span class="line">1</span><br></pre></td></tr></table></figure></li>
+<li>运行 <code>gpio write 1 0</code> 改变引脚的输出值</li>
 <li>再次运行 <code>gpio read 1</code> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">root@Khadas:~# gpio read 1   </span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-</li>
+你可看到将引脚设置成输出后，就可以通过写命令改变引脚的电平值了。</li>
 </ul>
-<p>你可看到将引脚设置成输出后，就可以通过写命令改变引脚的电平值了。</p>
 <h4 id="通过编写linuxC程序控制GPIO" class="article-heading"><a href="#通过编写linuxC程序控制GPIO" class="headerlink" title="通过编写linuxC程序控制GPIO"></a>通过编写linuxC程序控制GPIO<a class="article-anchor" href="#通过编写linuxC程序控制GPIO" aria-hidden="true"></a></h4><ul>
-<li><p>这里同样是一个控制GPIO1的简单程序。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;wiringPi.h&gt;</span><br><span class="line"></span><br><span class="line">const int gpio_pin = 1;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	if(-1 == wiringPiSetup())&#123;</span><br><span class="line">		printf(&quot;set up error&quot;);</span><br><span class="line">		exit(1);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	pinMode(gpio_pin,OUTPUT);</span><br><span class="line"></span><br><span class="line">	while(1)&#123;</span><br><span class="line">		digitalWrite(gpio_pin,HIGH);</span><br><span class="line">		printf(&quot;wPi Pin %d now is GIGH\n&quot;,gpio_pin);</span><br><span class="line">		delay(5000);</span><br><span class="line">		digitalWrite(gpio_pin,LOW);</span><br><span class="line">		printf(&quot;wPi Pin %d now is LOW\n&quot;,gpio_pin);</span><br><span class="line">		delay(5000);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过gcc可以编译成可执行的程序。编译的命令是 <code>gcc -o test test.c -lwiringPi -lpthread -lrt -lm -lcrypt</code>.</p>
-</li>
+<li>这里同样是一个控制GPIO1的简单程序。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;wiringPi.h&gt;</span><br><span class="line"></span><br><span class="line">const int gpio_pin = 1;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	if(-1 == wiringPiSetup())&#123;</span><br><span class="line">		printf(&quot;set up error&quot;);</span><br><span class="line">		exit(1);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	pinMode(gpio_pin,OUTPUT);</span><br><span class="line"></span><br><span class="line">	while(1)&#123;</span><br><span class="line">		digitalWrite(gpio_pin,HIGH);</span><br><span class="line">		printf(&quot;wPi Pin %d now is GIGH\n&quot;,gpio_pin);</span><br><span class="line">		delay(5000);</span><br><span class="line">		digitalWrite(gpio_pin,LOW);</span><br><span class="line">		printf(&quot;wPi Pin %d now is LOW\n&quot;,gpio_pin);</span><br><span class="line">		delay(5000);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>通过gcc可以编译成可执行的程序。编译的命令是 <code>gcc -o test test.c -lwiringPi -lpthread -lrt -lm -lcrypt</code>.</li>
 <li>运行 <code>./test</code> 就可以控制wpi的1号引脚了<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wPi Pin 1 now is GIGH</span><br><span class="line">wPi Pin 1 now is LOW</span><br><span class="line">wPi Pin 1 now is GIGH</span><br><span class="line">wPi Pin 1 now is LOW</span><br></pre></td></tr></table></figure>
-</li>
+你可以通过命令<code>gpio read 1</code>观察引脚的电平变化是否正确。</li>
 </ul>
-<p>你可以通过命令<code>gpio read 1</code>观察引脚的电平变化是否正确。</p>
 <h3 id="注意" class="article-heading"><a href="#注意" class="headerlink" title="注意"></a>注意<a class="article-anchor" href="#注意" aria-hidden="true"></a></h3><p>wiringPi本身包括很多功能，不仅仅只是控制GPIO引脚的输出和读取引脚电平值。这里只是一个简单的介绍和使用，更多的用法需要使用者自己去探索。</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-08-21T09:54:38.232Z" itemprop="dateModified">上次更新：2019-08-21</time>
+                <time class="article-footer-updated" datetime="2019-11-01T04:40:32.157Z" itemprop="dateModified">上次更新：2019-11-01</time>
                 <a href="HowtoEnableAdb.html" class="article-footer-prev" title="如何使能ADB"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToUseRPiGPIO.html" class="article-footer-next" title="如何使用RPi.GPIO"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

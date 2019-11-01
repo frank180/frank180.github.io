@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>如何使用I2C接口 | Khadas Docs</title><meta name="generator" content="Hexo 3.9.0">
+  <title>如何使用I2C接口 | Khadas Docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -60,17 +60,17 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="Khadas Docs">
   <!-- Open Graph -->
-  <meta name="description" content="这篇文档介绍如何在Android和Ubuntu下使用I2C。 前提条件 Ubuntu V180531或更新版本 Android V180619或更新版本  连线I2C ASensor SCL  I2C_SCK_A (PIN 22)Sensor SDA  I2C_SDA_A (PIN 23)Sensor GND  GNDSensor VCC  5V或3.3V //取决于传感器供电 I2C BSens">
+  <meta name="description" content="这篇文档介绍如何在Android和Ubuntu下使用I2C。 前提条件 Ubuntu V180531或更新版本 Android V180619或更新版本  连线I2C ASensor SCL  I2C_SCK_A (PIN 22)Sensor SDA  I2C_SDA_A (PIN 23)Sensor GND  GNDSensor VCC  5V或3.3V &#x2F;&#x2F;取决于传感器供电 I2C BSens">
 <meta property="og:type" content="website">
 <meta property="og:title" content="如何使用I2C接口">
-<meta property="og:url" content="https://docs.khadas.com/zh-cn/vim2/HowToAccessI2c.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;zh-cn&#x2F;vim2&#x2F;HowToAccessI2c.html">
 <meta property="og:site_name" content="Khadas Docs">
-<meta property="og:description" content="这篇文档介绍如何在Android和Ubuntu下使用I2C。 前提条件 Ubuntu V180531或更新版本 Android V180619或更新版本  连线I2C ASensor SCL  I2C_SCK_A (PIN 22)Sensor SDA  I2C_SDA_A (PIN 23)Sensor GND  GNDSensor VCC  5V或3.3V //取决于传感器供电 I2C BSens">
+<meta property="og:description" content="这篇文档介绍如何在Android和Ubuntu下使用I2C。 前提条件 Ubuntu V180531或更新版本 Android V180619或更新版本  连线I2C ASensor SCL  I2C_SCK_A (PIN 22)Sensor SDA  I2C_SDA_A (PIN 23)Sensor GND  GNDSensor VCC  5V或3.3V &#x2F;&#x2F;取决于传感器供电 I2C BSens">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-08-21T09:54:38.232Z">
+<meta property="article:published_time" content="2019-11-01T04:40:32.157Z">
+<meta property="article:modified_time" content="2019-11-01T04:40:32.157Z">
+<meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何使用I2C接口">
-<meta name="twitter:description" content="这篇文档介绍如何在Android和Ubuntu下使用I2C。 前提条件 Ubuntu V180531或更新版本 Android V180619或更新版本  连线I2C ASensor SCL  I2C_SCK_A (PIN 22)Sensor SDA  I2C_SDA_A (PIN 23)Sensor GND  GNDSensor VCC  5V或3.3V //取决于传感器供电 I2C BSens">
 <meta name="twitter:site" content="khadas_official">
   <!-- Google Analytics -->
   
@@ -95,7 +95,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/zh-cn/vim1/" class="main-nav-link">VIM1</a><a href="/zh-cn/vim2/" class="main-nav-link current">VIM2</a><a href="/zh-cn/vim3/" class="main-nav-link">VIM3</a><a href="/zh-cn/edge/" class="main-nav-link">Edge</a><a href="/zh-cn/toneboard/" class="main-nav-link">ToneBoard</a><a href="https://dl.khadas.com/Firmware/" target="_blank" class="main-nav-link">固件下载</a><a href="/zh-cn/faq/" class="main-nav-link">FAQ</a>
-      <a href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -130,7 +130,7 @@
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">如何使用I2C接口</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim2/HowToAccessI2c.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/vim2/HowToAccessI2c.md" target="_blank" rel="noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <p>这篇文档介绍如何在Android和Ubuntu下使用I2C。</p>
@@ -140,17 +140,14 @@
 </ul>
 <h3 id="连线" class="article-heading"><a href="#连线" class="headerlink" title="连线"></a>连线<a class="article-anchor" href="#连线" aria-hidden="true"></a></h3><p><strong>I2C A</strong><br><code>Sensor SCL</code> <-> <code>I2C_SCK_A (PIN 22)</code><br><code>Sensor SDA</code> <-> <code>I2C_SDA_A (PIN 23)</code><br><code>Sensor GND</code> <-> <code>GND</code><br><code>Sensor VCC</code> <-> <code>5V或3.3V</code> //取决于传感器供电</-></-></-></-></p>
 <p><strong>I2C B</strong><br><code>Sensor SCL</code> <-> <code>I2C_SCK_B (PIN 25)</code><br><code>Sensor SDA</code> <-> <code>I2C_SDA_B (PIN 26)</code><br><code>Sensor GND</code> <-> <code>GND</code><br><code>Sensor VCC</code> <-> <code>5V或3.3V</code> //取决于传感器供电</-></-></-></-></p>
-<h3 id="检测设备" class="article-heading"><a href="#检测设备" class="headerlink" title="检测设备"></a>检测设备<a class="article-anchor" href="#检测设备" aria-hidden="true"></a></h3><p>检测挂载在<code>I2C A</code>上的设备：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># i2cdetect -y -r 1</span><br><span class="line">    0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f</span><br><span class="line">00:          -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">10: -- -- -- -- -- -- -- -- -- -- -- -- -- 1d -- -- </span><br><span class="line">20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">70: -- -- -- -- -- -- -- --</span><br></pre></td></tr></table></figure></p>
-<p>检测挂载在<code>I2C B</code>上的设备：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># i2cdetect -y -r 2</span><br><span class="line">     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f</span><br><span class="line">00:          -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">10: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- -- </span><br><span class="line">20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">70: -- -- -- -- -- -- -- --</span><br></pre></td></tr></table></figure></p>
-<p>如果连线正确并且所接传感器是正常的那么你会看到所接设备的地址，如：<code>0x1d</code>,<code>0x18</code> and <code>0x51</code>。</p>
+<h3 id="检测设备" class="article-heading"><a href="#检测设备" class="headerlink" title="检测设备"></a>检测设备<a class="article-anchor" href="#检测设备" aria-hidden="true"></a></h3><p>检测挂载在<code>I2C A</code>上的设备：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># i2cdetect -y -r 1</span><br><span class="line">    0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f</span><br><span class="line">00:          -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">10: -- -- -- -- -- -- -- -- -- -- -- -- -- 1d -- -- </span><br><span class="line">20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">70: -- -- -- -- -- -- -- --</span><br></pre></td></tr></table></figure><br>检测挂载在<code>I2C B</code>上的设备：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># i2cdetect -y -r 2</span><br><span class="line">     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f</span><br><span class="line">00:          -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">10: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- -- </span><br><span class="line">20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">50: -- 51 -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </span><br><span class="line">70: -- -- -- -- -- -- -- --</span><br></pre></td></tr></table></figure><br>如果连线正确并且所接传感器是正常的那么你会看到所接设备的地址，如：<code>0x1d</code>,<code>0x18</code> and <code>0x51</code>。</p>
 <p><em>注意: 执行这些命令需要root权限。</em></p>
-<h3 id="从设备读取寄存器值" class="article-heading"><a href="#从设备读取寄存器值" class="headerlink" title="从设备读取寄存器值"></a>从设备读取寄存器值<a class="article-anchor" href="#从设备读取寄存器值" aria-hidden="true"></a></h3><p>从挂载在<code>I2C A</code>上设备地址为<code>0x1d</code>的设备读取寄存器<code>0x0d</code>的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># i2cget -f -y 1 0x1d 0x0d</span><br><span class="line">0x2a</span><br></pre></td></tr></table></figure></p>
-<p><em>注意: 执行命令需要root权限。</em> </p>
+<h3 id="从设备读取寄存器值" class="article-heading"><a href="#从设备读取寄存器值" class="headerlink" title="从设备读取寄存器值"></a>从设备读取寄存器值<a class="article-anchor" href="#从设备读取寄存器值" aria-hidden="true"></a></h3><p>从挂载在<code>I2C A</code>上设备地址为<code>0x1d</code>的设备读取寄存器<code>0x0d</code>的值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># i2cget -f -y 1 0x1d 0x0d</span><br><span class="line">0x2a</span><br></pre></td></tr></table></figure><br><em>注意: 执行命令需要root权限。</em> </p>
 <p>更多用法请参考i2c工具帮助信息。</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-08-21T09:54:38.232Z" itemprop="dateModified">上次更新：2019-08-21</time>
+                <time class="article-footer-updated" datetime="2019-11-01T04:40:32.157Z" itemprop="dateModified">上次更新：2019-11-01</time>
                 <a href="HowToAccessGpio.html" class="article-footer-prev" title="如何访问GPIO"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="HowToInstallADBTool.html" class="article-footer-next" title="如何安装ADB调试工具"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
