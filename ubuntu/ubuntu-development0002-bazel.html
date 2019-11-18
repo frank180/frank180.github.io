@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/ubuntu/ubuntu-development0002-bazel.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/ubuntu/ubuntu-development0002-bazel.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/ubuntu/ubuntu-development0002-bazel.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="安装bazel在Ubuntu18.04上bazel是一种类似make的代码编译工具，很多项目会使用bazel编译，比如TensorFlow的silm工具。 准备依赖安装# sudo apt install pkg-config zip g++ zlib1g-dev unzip python3 准备java环境按照这个文档进行安装安装java 获取安装的脚本从github获取这里以0.29.1为例，">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Khadas Docs">
+<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;ubuntu&#x2F;ubuntu-development0002-bazel.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="安装bazel在Ubuntu18.04上bazel是一种类似make的代码编译工具，很多项目会使用bazel编译，比如TensorFlow的silm工具。 准备依赖安装# sudo apt install pkg-config zip g++ zlib1g-dev unzip python3 准备java环境按照这个文档进行安装安装java 获取安装的脚本从github获取这里以0.29.1为例，">
+<meta property="og:image" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;images&#x2F;ubuntu&#x2F;ubuntu-development0002-1.png">
+<meta property="article:published_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:modified_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;images&#x2F;ubuntu&#x2F;ubuntu-development0002-1.png">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/docs/" class="main-nav-link">Docs</a><a href="/ubuntu/" class="main-nav-link current">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link">AI</a>
+      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/ubuntu/ubuntu-development0002-bazel.md" target="_blank" rel="noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <h1 id="安装bazel在Ubuntu18-04上" class="article-heading"><a href="#安装bazel在Ubuntu18-04上" class="headerlink" title="安装bazel在Ubuntu18.04上"></a>安装bazel在Ubuntu18.04上<a class="article-anchor" href="#安装bazel在Ubuntu18-04上" aria-hidden="true"></a></h1><p>bazel是一种类似make的代码编译工具，很多项目会使用bazel编译，比如TensorFlow的silm工具。</p>
+<h2 id="准备" class="article-heading"><a href="#准备" class="headerlink" title="准备"></a>准备<a class="article-anchor" href="#准备" aria-hidden="true"></a></h2><h3 id="依赖安装" class="article-heading"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装<a class="article-anchor" href="#依赖安装" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sudo apt install pkg-config zip g++ zlib1g-dev unzip python3</span></span><br></pre></td></tr></table></figure>
+<h3 id="准备java环境" class="article-heading"><a href="#准备java环境" class="headerlink" title="准备java环境"></a>准备java环境<a class="article-anchor" href="#准备java环境" aria-hidden="true"></a></h3><p>按照这个文档进行安装<a href="/ubuntu/ubuntu-development0001-java.html">安装java</a></p>
+<h2 id="获取安装的脚本" class="article-heading"><a href="#获取安装的脚本" class="headerlink" title="获取安装的脚本"></a>获取安装的脚本<a class="article-anchor" href="#获取安装的脚本" aria-hidden="true"></a></h2><h3 id="从github获取" class="article-heading"><a href="#从github获取" class="headerlink" title="从github获取"></a>从github获取<a class="article-anchor" href="#从github获取" aria-hidden="true"></a></h3><p>这里以0.29.1为例，具体下载那个版本依据需求下载,下载linux_x64的sh文件<br><img src="/images/ubuntu/ubuntu-development0002-1.png" alt="ubuntu-development0002-1"></p>
+<h3 id="添加执行的权限" class="article-heading"><a href="#添加执行的权限" class="headerlink" title="添加执行的权限"></a>添加执行的权限<a class="article-anchor" href="#添加执行的权限" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod +x bazel-0.29.1-installer-linux-x86_64.sh</span><br></pre></td></tr></table></figure>
+<h2 id="安装以及验证" class="article-heading"><a href="#安装以及验证" class="headerlink" title="安装以及验证"></a>安装以及验证<a class="article-anchor" href="#安装以及验证" aria-hidden="true"></a></h2><h3 id="安装" class="article-heading"><a href="#安装" class="headerlink" title="安装"></a>安装<a class="article-anchor" href="#安装" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ./bazel-0.29.1-installer-linux-x86_64.sh --user</span><br></pre></td></tr></table></figure>
+<p><code>--user</code>选项是可选的，加上<code>--user</code>选项会安装在HOME目录并将<code>.bazelrc</code>路径设置为<code>$HOME/.bazelrc</code>。加上的好处是其他用户可以安装版本和你不同的bazel工具。不同软件对bazel版本有不同的需求</p>
+<h3 id="配置-user" class="article-heading"><a href="#配置-user" class="headerlink" title="配置(--user)"></a>配置(<code>--user</code>)<a class="article-anchor" href="#配置-user" aria-hidden="true"></a></h3><p>使用了<code>--user</code>选项以后，需要配置路径到shell的配置文件。<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim ~/.bashrc</span><br></pre></td></tr></table></figure><br>在文件尾添加<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">export PATH=&quot;$PATH:$HOME/bin&quot;</span><br></pre></td></tr></table></figure><br>重启终端或者重新加载配置文件<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<h3 id="验证" class="article-heading"><a href="#验证" class="headerlink" title="验证"></a>验证<a class="article-anchor" href="#验证" aria-hidden="true"></a></h3><p>通过<code>bazel version</code>命令可以查看到版本号就是安装成功了<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ bazel version</span><br><span class="line">WARNING: --batch mode is deprecated. Please instead explicitly shut down your Bazel server using the command &quot;bazel shutdown&quot;.</span><br><span class="line">Build label: 0.29.1</span><br><span class="line">Build target: bazel-out/k8-opt/bin/src/main/java/com/google/devtools/build/lib/bazel/BazelServer_deploy.jar</span><br><span class="line">Build time: Tue Sep 10 13:44:39 2019 (1568123079)</span><br><span class="line">Build timestamp: 1568123079</span><br><span class="line">Build timestamp as int: 1568123079</span><br></pre></td></tr></table></figure></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-18T03:04:32.675Z" itemprop="dateModified">Last updated: 2019-11-18</time>
+                <a href="ubuntu-development0001-java.html" class="article-footer-prev" title="Java环境安装配置"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装bazel在Ubuntu18-04上"><span class="toc-text">安装bazel在Ubuntu18.04上</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖安装"><span class="toc-text">依赖安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备java环境"><span class="toc-text">准备java环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取安装的脚本"><span class="toc-text">获取安装的脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#从github获取"><span class="toc-text">从github获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加执行的权限"><span class="toc-text">添加执行的权限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装以及验证"><span class="toc-text">安装以及验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置-user"><span class="toc-text">配置(--user)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证"><span class="toc-text">验证</span></a></li></ol></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Ubuntu基础配置</summary><a href="ubuntu0001-make-boot-disk.html" class="sidebar-link first">制作启动盘</a><a href="ubuntu0002-install-system.html" class="sidebar-link">安装系统</a><a href="ubuntu0003-basic-configuration.html" class="sidebar-link">基础系统配置</a><a href="ubuntu0004-system-beautification.html" class="sidebar-link">系统主题配置</a><a href="ubuntu0005-install-nvidia.html" class="sidebar-link">安装CUDA以及CUDNN</a></details></strong><strong class="sidebar-title"><details open><summary>开发环境</summary><a href="ubuntu-development0001-java.html" class="sidebar-link first">Java环境安装配置</a><a href="ubuntu-development0002-bazel.html" class="sidebar-link current">bazel工具编译安装</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/docs/" class="mobile-nav-link">Docs</a><a href="/ubuntu/" class="mobile-nav-link current">ubuntu</a><a href="/stm/" class="mobile-nav-link">STM</a><a href="/web/" class="mobile-nav-link">Web</a><a href="/database/" class="mobile-nav-link">Database</a><a href="/AI/" class="mobile-nav-link">AI</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Ubuntu基础配置</summary><a href="ubuntu0001-make-boot-disk.html" class="mobile-nav-link first">制作启动盘</a><a href="ubuntu0002-install-system.html" class="mobile-nav-link">安装系统</a><a href="ubuntu0003-basic-configuration.html" class="mobile-nav-link">基础系统配置</a><a href="ubuntu0004-system-beautification.html" class="mobile-nav-link">系统主题配置</a><a href="ubuntu0005-install-nvidia.html" class="mobile-nav-link">安装CUDA以及CUDNN</a></details></strong><strong class="mobile-nav-title"><details open><summary>开发环境</summary><a href="ubuntu-development0001-java.html" class="mobile-nav-link first">Java环境安装配置</a><a href="ubuntu-development0002-bazel.html" class="mobile-nav-link current">bazel工具编译安装</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

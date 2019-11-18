@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>贡献 | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/docs/contributing.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/docs/contributing.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/docs/contributing.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="We welcome you to join the development of Hexo. 🤗 开发我们非常欢迎您加入 Hexo 的开发，这份文件将帮助您了解开发流程。 开始之前请遵守以下准则：  遵守 Google JavaScript 代码风格。 使用 2 个空格缩排。 不要把逗号放在最前面。  工作流程 Fork hexojs&#x2F;hexo 把库（repository）复制到电脑上，并安装">
+<meta property="og:type" content="website">
+<meta property="og:title" content="贡献">
+<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;zh-cn&#x2F;docs&#x2F;contributing.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="We welcome you to join the development of Hexo. 🤗 开发我们非常欢迎您加入 Hexo 的开发，这份文件将帮助您了解开发流程。 开始之前请遵守以下准则：  遵守 Google JavaScript 代码风格。 使用 2 个空格缩排。 不要把逗号放在最前面。  工作流程 Fork hexojs&#x2F;hexo 把库（repository）复制到电脑上，并安装">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:modified_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/docs/" class="main-nav-link">文档</a><a href="/ubuntu/" class="main-nav-link">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link">AI</a>
+      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">贡献</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/docs/contributing.md" target="_blank" rel="noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>We welcome you to join the development of Hexo. 🤗</p>
+<h2 id="开发" class="article-heading"><a href="#开发" class="headerlink" title="开发"></a>开发<a class="article-anchor" href="#开发" aria-hidden="true"></a></h2><p>我们非常欢迎您加入 Hexo 的开发，这份文件将帮助您了解开发流程。</p>
+<h3 id="开始之前" class="article-heading"><a href="#开始之前" class="headerlink" title="开始之前"></a>开始之前<a class="article-anchor" href="#开始之前" aria-hidden="true"></a></h3><p>请遵守以下准则：</p>
+<ul>
+<li>遵守 <a href="https://google.github.io/styleguide/jsguide.html" target="_blank" rel="noopener">Google JavaScript 代码风格</a>。</li>
+<li>使用 2 个空格缩排。</li>
+<li>不要把逗号放在最前面。</li>
+</ul>
+<h3 id="工作流程" class="article-heading"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程<a class="article-anchor" href="#工作流程" aria-hidden="true"></a></h3><ol>
+<li>Fork <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener">hexojs/hexo</a></li>
+<li><p>把库（repository）复制到电脑上，并安装所依赖的插件。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/&lt;username&gt;/hexo.git</span><br><span class="line">$ cd hexo</span><br><span class="line">$ npm install</span><br><span class="line">$ git submodule update --init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新增一个功能分支。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b new_feature</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开始开发。</p>
+</li>
+<li><p>推送（push）分支。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin new_feature</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立一个新的合并申请（pull request）并描述变动。</p>
+</li>
+</ol>
+<h3 id="注意事项" class="article-heading"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项<a class="article-anchor" href="#注意事项" aria-hidden="true"></a></h3><ul>
+<li>不要修改 <code>package.json</code> 的版本号。</li>
+<li><p>只有在测试通过的情况下您的合并申请才会被批准，在提交前别忘了进行测试。</p>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm test</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Updating-official-plugins" class="article-heading"><a href="#Updating-official-plugins" class="headerlink" title="Updating official-plugins"></a>Updating official-plugins<a class="article-anchor" href="#Updating-official-plugins" aria-hidden="true"></a></h2><p>我们也欢迎给 <a href="https://github.com/hexojs" target="_blank" rel="noopener">Hexo 官方插件</a> 提交 PR 和 Issue 🤗</p>
+<h2 id="更新文档" class="article-heading"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档<a class="article-anchor" href="#更新文档" aria-hidden="true"></a></h2><p>Hexo 文档开放源代码，您可以在 <a href="https://github.com/hexojs/site" target="_blank" rel="noopener">hexojs/site</a> 找到源代码。</p>
+<h3 id="工作流程-1" class="article-heading"><a href="#工作流程-1" class="headerlink" title="工作流程"></a>工作流程<a class="article-anchor" href="#工作流程-1" aria-hidden="true"></a></h3><ol>
+<li>Fork <a href="https://github.com/hexojs/site" target="_blank" rel="noopener">hexojs/site</a></li>
+<li><p>把库（repository）复制到电脑上，并安装所依赖的插件。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/&lt;username&gt;/site.git</span><br><span class="line">$ cd site</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开始编辑文件，您可以通过服务器预览变动。</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>推送（push）分支。</p>
+</li>
+<li>建立一个新的合并申请（pull request）并描述变动。</li>
+</ol>
+<h3 id="翻译" class="article-heading"><a href="#翻译" class="headerlink" title="翻译"></a>翻译<a class="article-anchor" href="#翻译" aria-hidden="true"></a></h3><ol>
+<li>在 <code>source</code> 资料夹中建立一个新的语言资料夹（全小写）。</li>
+<li>把 <code>source</code> 资料夹中相关的文件（Markdown 和模板文件）复制到新的语言资料夹中。</li>
+<li>在 <code>source/_data/language.yml</code> 中新增语言。</li>
+<li>将 <code>en.yml</code> 复制到 <code>themes/navy/languages</code>中并命名为语言名称（全小写）。</li>
+</ol>
+<h2 id="反馈问题" class="article-heading"><a href="#反馈问题" class="headerlink" title="反馈问题"></a>反馈问题<a class="article-anchor" href="#反馈问题" aria-hidden="true"></a></h2><p>当您在使用 Hexo 时遇到问题，您可以尝试在 <a href="troubleshooting.html">问题解答</a> 中寻找解答，或是在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 或 <a href="https://groups.google.com/group/hexo" target="_blank" rel="noopener">Google Group</a> 上提问。如果你没有找答案，请在 Github 报告它。</p>
+<ol>
+<li>在 <a href="commands.html#调试模式">调试模式</a> 中重现问题。</li>
+<li>运行 <code>hexo version</code> 并检查版本信息。</li>
+<li>把调试信息和版本信息都贴到 GitHub。</li>
+</ol>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-18T03:04:32.675Z" itemprop="dateModified">上次更新：2019-11-18</time>
+                <a href="troubleshooting.html" class="article-footer-prev" title="问题解答"><i class="fa fa-chevron-left"></i><span>上一页</span></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#开发"><span class="toc-text">开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#开始之前"><span class="toc-text">开始之前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工作流程"><span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Updating-official-plugins"><span class="toc-text">Updating official-plugins</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新文档"><span class="toc-text">更新文档</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#工作流程-1"><span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#翻译"><span class="toc-text">翻译</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反馈问题"><span class="toc-text">反馈问题</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="setup.html" class="sidebar-link">建站</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">命令</a><a href="migration.html" class="sidebar-link">迁移</a></details></strong><strong class="sidebar-title"><details><summary>基本操作</summary><a href="writing.html" class="sidebar-link first">写作</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">标签插件</a><a href="asset-folders.html" class="sidebar-link">资源文件夹</a><a href="data-files.html" class="sidebar-link">数据文件夹</a><a href="server.html" class="sidebar-link">服务器</a><a href="generating.html" class="sidebar-link">生成器</a><a href="deployment.html" class="sidebar-link">部署</a></details></strong><strong class="sidebar-title"><details><summary>自定义</summary><a href="permalinks.html" class="sidebar-link first">永久链接</a><a href="themes.html" class="sidebar-link">主题</a><a href="templates.html" class="sidebar-link">模版</a><a href="variables.html" class="sidebar-link">变量</a><a href="helpers.html" class="sidebar-link">辅助函数</a><a href="internationalization.html" class="sidebar-link">国际化 (i18n)</a><a href="plugins.html" class="sidebar-link">插件</a></details></strong><strong class="sidebar-title"><details open><summary>其他</summary><a href="troubleshooting.html" class="sidebar-link first">问题解答</a><a href="contributing.html" class="sidebar-link current">贡献</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/docs/" class="mobile-nav-link">文档</a><a href="/ubuntu/" class="mobile-nav-link">ubuntu</a><a href="/stm/" class="mobile-nav-link">STM</a><a href="/web/" class="mobile-nav-link">Web</a><a href="/database/" class="mobile-nav-link">Database</a><a href="/AI/" class="mobile-nav-link">AI</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="setup.html" class="mobile-nav-link">建站</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="commands.html" class="mobile-nav-link">命令</a><a href="migration.html" class="mobile-nav-link">迁移</a></details></strong><strong class="mobile-nav-title"><details><summary>基本操作</summary><a href="writing.html" class="mobile-nav-link first">写作</a><a href="front-matter.html" class="mobile-nav-link">Front-matter</a><a href="tag-plugins.html" class="mobile-nav-link">标签插件</a><a href="asset-folders.html" class="mobile-nav-link">资源文件夹</a><a href="data-files.html" class="mobile-nav-link">数据文件夹</a><a href="server.html" class="mobile-nav-link">服务器</a><a href="generating.html" class="mobile-nav-link">生成器</a><a href="deployment.html" class="mobile-nav-link">部署</a></details></strong><strong class="mobile-nav-title"><details><summary>自定义</summary><a href="permalinks.html" class="mobile-nav-link first">永久链接</a><a href="themes.html" class="mobile-nav-link">主题</a><a href="templates.html" class="mobile-nav-link">模版</a><a href="variables.html" class="mobile-nav-link">变量</a><a href="helpers.html" class="mobile-nav-link">辅助函数</a><a href="internationalization.html" class="mobile-nav-link">国际化 (i18n)</a><a href="plugins.html" class="mobile-nav-link">插件</a></details></strong><strong class="mobile-nav-title"><details open><summary>其他</summary><a href="troubleshooting.html" class="mobile-nav-link first">问题解答</a><a href="contributing.html" class="mobile-nav-link current">贡献</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

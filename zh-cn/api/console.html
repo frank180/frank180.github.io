@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>控制台（Console） | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/api/console.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/api/console.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/api/console.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="控制台是 Hexo 与开发者之间沟通的桥梁。 概要hexo.extend.console.register(name, desc, options, function(args)&amp;#123;  &#x2F;&#x2F; ...&amp;#125;);    参数 描述     name 名称   desc 描述   options 选项    在函数中会传入 args 参数，此参数是使用者在终端中所传入的参数，是一个经 Mi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="控制台（Console）">
+<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;zh-cn&#x2F;api&#x2F;console.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="控制台是 Hexo 与开发者之间沟通的桥梁。 概要hexo.extend.console.register(name, desc, options, function(args)&amp;#123;  &#x2F;&#x2F; ...&amp;#125;);    参数 描述     name 名称   desc 描述   options 选项    在函数中会传入 args 参数，此参数是使用者在终端中所传入的参数，是一个经 Mi">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:modified_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/docs/" class="main-nav-link">文档</a><a href="/ubuntu/" class="main-nav-link">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link">AI</a>
+      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">控制台（Console）</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/api/console.md" target="_blank" rel="noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>控制台是 Hexo 与开发者之间沟通的桥梁。</p>
+<h2 id="概要" class="article-heading"><a href="#概要" class="headerlink" title="概要"></a>概要<a class="article-anchor" href="#概要" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.extend.console.register(name, desc, options, <span class="function"><span class="keyword">function</span>(<span class="params">args</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>名称</td>
+</tr>
+<tr>
+<td><code>desc</code></td>
+<td>描述</td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>选项</td>
+</tr>
+</tbody>
+</table>
+<p>在函数中会传入 <code>args</code> 参数，此参数是使用者在终端中所传入的参数，是一个经 <a href="https://github.com/substack/minimist" target="_blank" rel="noopener">Minimist</a> 解析的对象。</p>
+<h2 id="选项" class="article-heading"><a href="#选项" class="headerlink" title="选项"></a>选项<a class="article-anchor" href="#选项" aria-hidden="true"></a></h2><h3 id="用法" class="article-heading"><a href="#用法" class="headerlink" title="用法"></a>用法<a class="article-anchor" href="#用法" aria-hidden="true"></a></h3><p>控制台的操作方法，例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;<span class="attr">usage</span>: <span class="string">'[layout] &lt;title&gt;'</span>&#125;</span><br><span class="line"><span class="comment">// hexo new [layout] &lt;title&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="参数" class="article-heading"><a href="#参数" class="headerlink" title="参数"></a>参数<a class="article-anchor" href="#参数" aria-hidden="true"></a></h3><p>控制台各个参数的说明，例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="built_in">arguments</span>: [</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'layout'</span>, <span class="attr">desc</span>: <span class="string">'Post layout'</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'title'</span>, <span class="attr">desc</span>: <span class="string">'Post title'</span>&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="选项-1" class="article-heading"><a href="#选项-1" class="headerlink" title="选项"></a>选项<a class="article-anchor" href="#选项-1" aria-hidden="true"></a></h3><p>控制台的选项，例如：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  options: [</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'-r, --replace'</span>, <span class="attr">desc</span>: <span class="string">'Replace existing files'</span>&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="描述" class="article-heading"><a href="#描述" class="headerlink" title="描述"></a>描述<a class="article-anchor" href="#描述" aria-hidden="true"></a></h3><p>控制台更详细的说明。</p>
+<h2 id="范例" class="article-heading"><a href="#范例" class="headerlink" title="范例"></a>范例<a class="article-anchor" href="#范例" aria-hidden="true"></a></h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">hexo.extend.console.register(<span class="string">'config'</span>, <span class="string">'Display configuration'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">args</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(hexo.config);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-18T03:04:32.675Z" itemprop="dateModified">上次更新：2019-11-18</time>
+                
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概要"><span class="toc-text">概要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选项"><span class="toc-text">选项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用法"><span class="toc-text">用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项-1"><span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#描述"><span class="toc-text">描述</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#范例"><span class="toc-text">范例</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/docs/" class="mobile-nav-link">文档</a><a href="/ubuntu/" class="mobile-nav-link">ubuntu</a><a href="/stm/" class="mobile-nav-link">STM</a><a href="/web/" class="mobile-nav-link">Web</a><a href="/database/" class="mobile-nav-link">Database</a><a href="/AI/" class="mobile-nav-link">AI</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

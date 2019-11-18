@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Hexo 3.8.0 Released | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/news/2018/10/19/hexo-3-8-released/index.html">
+  <!-- Alternative links -->
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="New feature Supported absolute config path #3118 Added command line option --output to write db.json and _multiconfig to different paths #3122 Added meta generator injection filter #3129  Housekeeping">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 3.8.0 Released">
+<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;news&#x2F;2018&#x2F;10&#x2F;19&#x2F;hexo-3-8-released&#x2F;index.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="New feature Supported absolute config path #3118 Added command line option --output to write db.json and _multiconfig to different paths #3122 Added meta generator injection filter #3129  Housekeeping">
+<meta property="article:published_time" content="2018-10-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2019-11-18T03:04:32.439Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/docs/" class="main-nav-link">Docs</a><a href="/ubuntu/" class="main-nav-link">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link">AI</a>
+      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div class="wrapper">
+    <div class="inner">
+      <article class="article post" itemscope itemtype="http://schema.org/Article">
+  <header class="article-header">
+    
+      <h1 class="article-title" itemprop="name">Hexo 3.8.0 Released</h1>
+    
+    <a href="/news/2018/10/19/hexo-3-8-released/" class="article-date"><time datetime="2018-10-18T16:00:00.000Z">2018-10-19</time></a>
+  </header>
+  <div class="article-content" itemprop="articleBody">
+    <h2 id="New-feature" class="article-heading"><a href="#New-feature" class="headerlink" title="New feature"></a>New feature<a class="article-anchor" href="#New-feature" aria-hidden="true"></a></h2><ul>
+<li>Supported absolute config path <a href="https://github.com/hexojs/hexo/issues/3118" target="_blank" rel="noopener">#3118</a></li>
+<li>Added command line option <code>--output</code> to write <code>db.json</code> and <code>_multiconfig</code> to different paths <a href="https://github.com/hexojs/hexo/issues/3122" target="_blank" rel="noopener">#3122</a></li>
+<li>Added meta generator injection filter <a href="https://github.com/hexojs/hexo/issues/3129" target="_blank" rel="noopener">#3129</a></li>
+</ul>
+<h2 id="Housekeeping" class="article-heading"><a href="#Housekeeping" class="headerlink" title="Housekeeping"></a>Housekeeping<a class="article-anchor" href="#Housekeeping" aria-hidden="true"></a></h2><p><a href="https://github.com/hexojs/hexo/issues/3124" target="_blank" rel="noopener">#3124</a>, <a href="https://github.com/hexojs/hexo/issues/3117" target="_blank" rel="noopener">#3117</a>, <a href="https://github.com/hexojs/hexo/issues/3102" target="_blank" rel="noopener">#3102</a>, <a href="https://github.com/hexojs/hexo/issues/3276" target="_blank" rel="noopener">#3276</a>, <a href="https://github.com/hexojs/hexo/issues/3284" target="_blank" rel="noopener">#3284</a>, <a href="https://github.com/hexojs/hexo/issues/3285" target="_blank" rel="noopener">#3285</a>, <a href="https://github.com/hexojs/hexo/issues/3290" target="_blank" rel="noopener">#3290</a>, <a href="https://github.com/hexojs/hexo/issues/3293" target="_blank" rel="noopener">#3293</a></p>
+<p>More info: <a href="https://github.com/hexojs/hexo/releases" target="_blank" rel="noopener">changelog</a></p>
+
+  </div>
+  
+</article>
+
+    </div>
+  </div>
+</div>
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/docs/" class="mobile-nav-link">Docs</a><a href="/ubuntu/" class="mobile-nav-link">ubuntu</a><a href="/stm/" class="mobile-nav-link">STM</a><a href="/web/" class="mobile-nav-link">Web</a><a href="/database/" class="mobile-nav-link">Database</a><a href="/AI/" class="mobile-nav-link">AI</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

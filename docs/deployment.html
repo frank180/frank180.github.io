@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Deployment | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/docs/deployment.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/docs/deployment.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/docs/deployment.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your servers. $ hexo deploy Before your first deployment, you will have to modify some settin">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Deployment">
+<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;docs&#x2F;deployment.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your servers. $ hexo deploy Before your first deployment, you will have to modify some settin">
+<meta property="article:published_time" content="2019-11-18T03:04:32.439Z">
+<meta property="article:modified_time" content="2019-11-18T03:04:32.439Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/docs/" class="main-nav-link current">Docs</a><a href="/ubuntu/" class="main-nav-link">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link">AI</a>
+      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en" selected>English</option>
+        
+          <option value="zh-cn">简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Deployment</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/docs/deployment.md" target="_blank" rel="noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your servers.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>Before your first deployment, you will have to modify some settings in <code>_config.yml</code>. A valid deployment setting must have a <code>type</code> field. For example:</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br></pre></td></tr></table></figure>
+<p>You can use multiple deployers. Hexo will execute each deployer in order.</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">heroku</span></span><br><span class="line">  <span class="attr">repo:</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git" class="article-heading"><a href="#Git" class="headerlink" title="Git"></a>Git<a class="article-anchor" href="#Git" aria-hidden="true"></a></h2><ol>
+<li>Install <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Edit <strong>_config.yml</strong> (with example values shown below as comments):</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment">#https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">[branch]</span> <span class="comment">#published</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span> <span class="comment">#leave this blank</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repo</code></td>
+<td>GitHub/Bitbucket/Coding/GitLab repository URL</td>
+</tr>
+<tr>
+<td><code>branch</code></td>
+<td>Branch name. The deployer will detect the branch automatically if you are using GitHub or GitCafe.</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>Customize commit message (Default to <code>Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</code>)</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>Upload your site: <code>./node_modules/.bin/hexo clean &amp;&amp; ./node_modules/.bin/hexo deploy</code> (or <code>hexo clean &amp;&amp; hexo deploy</code> if you installed Hexo globally).</li>
+<li>On Github/BitBucket/Gitlab go to your repository settings and change your main branch from <code>master</code> to <code>published</code> (or whatever you called it in your _config.yml). Now your site will show as your account’s homepage.</li>
+</ol>
+<h3 id="How-does-it-work-exactly" class="article-heading"><a href="#How-does-it-work-exactly" class="headerlink" title="How does it work exactly?"></a>How does it work exactly?<a class="article-anchor" href="#How-does-it-work-exactly" aria-hidden="true"></a></h3><p>Your repository will have a <strong>master</strong> branch when you first made it. Keep working on this branch to create your site. When you deploy Hexo will create, or update, a new branch on the remote site (called <strong>published</strong> in the config above). Deployment won’t create a new branch locally, nor will it mess with your existing source code in the master branch locally or on the remote. You still need to keep pushing commits to the master branch manually to the remote server to keep your site backed up. In addition, if you are using a CNAME file to customize your Github Pages domain name, you need to put the CNAME file under <code>source_dir</code> so that Hexo can push it to the published branch.</p>
+<h2 id="Heroku" class="article-heading"><a href="#Heroku" class="headerlink" title="Heroku"></a>Heroku<a class="article-anchor" href="#Heroku" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-heroku" target="_blank" rel="noopener">hexo-deployer-heroku</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-heroku --save</span><br></pre></td></tr></table></figure>
+<p>Edit settings.</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">heroku</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repo</code>, <code>repository</code></td>
+<td>Heroku repository URL</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>Customize commit message (Default to <code>Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Netlify" class="article-heading"><a href="#Netlify" class="headerlink" title="Netlify"></a>Netlify<a class="article-anchor" href="#Netlify" aria-hidden="true"></a></h2><p><a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a> provides continuous deployment (Git-triggered builds), an intelligent global CDN, full DNS (including custom domains), automated HTTPS, asset acceleration, and a lot more. It is a unified platform that automates your code to create high-performant, easily maintainable sites and web apps.</p>
+<p>There are two different ways to deploy your sites on Netlify. The most common way is to use the web UI. Go to the <a href="https://app.netlify.com/start" target="_blank" rel="noopener">create a new site page</a>, select your project repo from GitHub, GitLab, or Bitbucket, and follow the prompts.</p>
+<p>Alternatively, you can use Netlify’s <a href="https://www.netlify.com/docs/cli/" target="_blank" rel="noopener">Node based CLI</a> tool to manage and deploy sites on Netlify without leaving your terminal.</p>
+<p>You can also add a <a href="https://www.netlify.com/docs/deploy-button/" target="_blank" rel="noopener">Deploy to Netlify Button</a> in your README.file to allow others to create a copy of your repository and be deployed to Netlify via one click.</p>
+<h2 id="Rsync" class="article-heading"><a href="#Rsync" class="headerlink" title="Rsync"></a>Rsync<a class="article-anchor" href="#Rsync" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-rsync" target="_blank" rel="noopener">hexo-deployer-rsync</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-rsync --save</span><br></pre></td></tr></table></figure>
+<p>Edit settings.</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">&lt;root&gt;</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">delete:</span> <span class="string">[true|false]</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="string">[true|false]</span></span><br><span class="line">  <span class="attr">ignore_errors:</span> <span class="string">[true|false]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>Address of remote host</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>Root directory of remote host</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td>22</td>
+</tr>
+<tr>
+<td><code>delete</code></td>
+<td>Delete old files on remote host</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Display verbose messages</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>ignore_errors</code></td>
+<td>Ignore errors</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="OpenShift" class="article-heading"><a href="#OpenShift" class="headerlink" title="OpenShift"></a>OpenShift<a class="article-anchor" href="#OpenShift" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-openshift" target="_blank" rel="noopener">hexo-deployer-openshift</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-openshift --save</span><br></pre></td></tr></table></figure>
+<p>Edit settings.</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">openshift</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repo</code></td>
+<td>OpenShift repository URL</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>Customize commit message (Default to <code>Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="FTPSync" class="article-heading"><a href="#FTPSync" class="headerlink" title="FTPSync"></a>FTPSync<a class="article-anchor" href="#FTPSync" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-ftpsync" target="_blank" rel="noopener">hexo-deployer-ftpsync</a>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-ftpsync --save</span><br></pre></td></tr></table></figure>
+<p>Edit settings.</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">ftpsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">pass:</span> <span class="string">&lt;password&gt;</span></span><br><span class="line">  <span class="attr">remote:</span> <span class="string">[remote]</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">ignore:</span> <span class="string">[ignore]</span></span><br><span class="line">  <span class="attr">connections:</span> <span class="string">[connections]</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="string">[true|false]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>Address of remote host</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td>Password</td>
+</tr>
+<tr>
+<td><code>remote</code></td>
+<td>Root directory of remote host</td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td>21</td>
+</tr>
+<tr>
+<td><code>ignore</code></td>
+<td>Ignore the files on either host or remote</td>
+</tr>
+<tr>
+<td><code>connections</code></td>
+<td>Connections number</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Display verbose messages</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="SFTP" class="article-heading"><a href="#SFTP" class="headerlink" title="SFTP"></a>SFTP<a class="article-anchor" href="#SFTP" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/lucascaro/hexo-deployer-sftp" target="_blank" rel="noopener">hexo-deployer-sftp</a>. Deploys the site via SFTP, allowing for passwordless connections using ssh-agent.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-sftp --save</span><br></pre></td></tr></table></figure>
+<p>Edit settings.</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">sftp</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">pass:</span> <span class="string">&lt;password&gt;</span></span><br><span class="line">  <span class="attr">remotePath:</span> <span class="string">[remote</span> <span class="string">path]</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">privateKey:</span> <span class="string">[path/to/privateKey]</span></span><br><span class="line">  <span class="attr">passphrase:</span> <span class="string">[passphrase]</span></span><br><span class="line">  <span class="attr">agent:</span> <span class="string">[path/to/agent/socket]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>Address of remote host</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td>Password</td>
+</tr>
+<tr>
+<td><code>remotePath</code></td>
+<td>Root directory of remote host</td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td>22</td>
+</tr>
+<tr>
+<td><code>privateKey</code></td>
+<td>Path to a ssh private key</td>
+</tr>
+<tr>
+<td><code>passphrase</code></td>
+<td>Optional passphrase for the private key</td>
+</tr>
+<tr>
+<td><code>agent</code></td>
+<td>Path to the ssh-agent socket</td>
+<td><code>$SSH_AUTH_SOCK</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ZEIT-Now" class="article-heading"><a href="#ZEIT-Now" class="headerlink" title="ZEIT Now"></a>ZEIT Now<a class="article-anchor" href="#ZEIT-Now" aria-hidden="true"></a></h2><p><a href="https://zeit.co" target="_blank" rel="noopener">ZEIT Now</a> is a cloud platform for websites and serverless APIs, that you can use to deploy your Hexo site to your personal domain (or a free <code>.now.sh</code> suffixed URL) with just a single command.</p>
+<ol>
+<li>Install <a href="https://zeit.co/download" target="_blank" rel="noopener">Now CLI</a>:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm i -g now</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Add a build script to your <code>package.json</code> file:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;build: &quot;hexo deploy&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>Deploy with a single command at the root of the project directory:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">now</span><br></pre></td></tr></table></figure>
+<h2 id="Other-Methods" class="article-heading"><a href="#Other-Methods" class="headerlink" title="Other Methods"></a>Other Methods<a class="article-anchor" href="#Other-Methods" aria-hidden="true"></a></h2><p>All generated files are saved in the <code>public</code> folder. You can copy them to wherever you like.</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-18T03:04:32.439Z" itemprop="dateModified">Last updated: 2019-11-18</time>
+                <a href="generating.html" class="article-footer-prev" title="Generating"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="permalinks.html" class="article-footer-next" title="Permalinks"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#How-does-it-work-exactly"><span class="toc-text">How does it work exactly?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Heroku"><span class="toc-text">Heroku</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Netlify"><span class="toc-text">Netlify</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rsync"><span class="toc-text">Rsync</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenShift"><span class="toc-text">OpenShift</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FTPSync"><span class="toc-text">FTPSync</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SFTP"><span class="toc-text">SFTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ZEIT-Now"><span class="toc-text">ZEIT Now</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other-Methods"><span class="toc-text">Other Methods</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>Getting Started</summary><a href="index.html" class="sidebar-link first">Overview</a><a href="setup.html" class="sidebar-link">Setup</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="commands.html" class="sidebar-link">Commands</a><a href="migration.html" class="sidebar-link">Migration</a></details></strong><strong class="sidebar-title"><details open><summary>Basic Usage</summary><a href="writing.html" class="sidebar-link first">Writing</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">Tag Plugins</a><a href="asset-folders.html" class="sidebar-link">Asset Folders</a><a href="data-files.html" class="sidebar-link">Data Files</a><a href="server.html" class="sidebar-link">Server</a><a href="generating.html" class="sidebar-link">Generating</a><a href="deployment.html" class="sidebar-link current">Deployment</a></details></strong><strong class="sidebar-title"><details><summary>Customization</summary><a href="permalinks.html" class="sidebar-link first">Permalinks</a><a href="themes.html" class="sidebar-link">Themes</a><a href="templates.html" class="sidebar-link">Templates</a><a href="variables.html" class="sidebar-link">Variables</a><a href="helpers.html" class="sidebar-link">Helpers</a><a href="internationalization.html" class="sidebar-link">Internationalization (i18n)</a><a href="plugins.html" class="sidebar-link">Plugins</a></details></strong><strong class="sidebar-title"><details><summary>Miscellaneous</summary><a href="troubleshooting.html" class="sidebar-link first">Troubleshooting</a><a href="contributing.html" class="sidebar-link">Contributing</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/docs/" class="mobile-nav-link current">Docs</a><a href="/ubuntu/" class="mobile-nav-link">ubuntu</a><a href="/stm/" class="mobile-nav-link">STM</a><a href="/web/" class="mobile-nav-link">Web</a><a href="/database/" class="mobile-nav-link">Database</a><a href="/AI/" class="mobile-nav-link">AI</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>Getting Started</summary><a href="index.html" class="mobile-nav-link first">Overview</a><a href="setup.html" class="mobile-nav-link">Setup</a><a href="configuration.html" class="mobile-nav-link">Configuration</a><a href="commands.html" class="mobile-nav-link">Commands</a><a href="migration.html" class="mobile-nav-link">Migration</a></details></strong><strong class="mobile-nav-title"><details open><summary>Basic Usage</summary><a href="writing.html" class="mobile-nav-link first">Writing</a><a href="front-matter.html" class="mobile-nav-link">Front-matter</a><a href="tag-plugins.html" class="mobile-nav-link">Tag Plugins</a><a href="asset-folders.html" class="mobile-nav-link">Asset Folders</a><a href="data-files.html" class="mobile-nav-link">Data Files</a><a href="server.html" class="mobile-nav-link">Server</a><a href="generating.html" class="mobile-nav-link">Generating</a><a href="deployment.html" class="mobile-nav-link current">Deployment</a></details></strong><strong class="mobile-nav-title"><details><summary>Customization</summary><a href="permalinks.html" class="mobile-nav-link first">Permalinks</a><a href="themes.html" class="mobile-nav-link">Themes</a><a href="templates.html" class="mobile-nav-link">Templates</a><a href="variables.html" class="mobile-nav-link">Variables</a><a href="helpers.html" class="mobile-nav-link">Helpers</a><a href="internationalization.html" class="mobile-nav-link">Internationalization (i18n)</a><a href="plugins.html" class="mobile-nav-link">Plugins</a></details></strong><strong class="mobile-nav-title"><details><summary>Miscellaneous</summary><a href="troubleshooting.html" class="mobile-nav-link first">Troubleshooting</a><a href="contributing.html" class="mobile-nav-link">Contributing</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+        <option value="zh-cn">简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

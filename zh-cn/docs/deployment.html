@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>部署 | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/docs/deployment.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/docs/deployment.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/docs/deployment.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。 $ hexo deploy 在开始之前，您必须先在 _config.yml 中修改参数，一个正确的部署配置中至少要有 type 参数，例如： deploy:  type: git 您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。 deploy:- type: git  repo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="部署">
+<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;zh-cn&#x2F;docs&#x2F;deployment.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。 $ hexo deploy 在开始之前，您必须先在 _config.yml 中修改参数，一个正确的部署配置中至少要有 type 参数，例如： deploy:  type: git 您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。 deploy:- type: git  repo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:modified_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/docs/" class="main-nav-link">文档</a><a href="/ubuntu/" class="main-nav-link">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link">AI</a>
+      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">部署</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/docs/deployment.md" target="_blank" rel="noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/ZIltKlkG4S0" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<p>Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>在开始之前，您必须先在 <code>_config.yml</code> 中修改参数，一个正确的部署配置中至少要有 <code>type</code> 参数，例如：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br></pre></td></tr></table></figure>
+<p>您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">heroku</span></span><br><span class="line">  <span class="attr">repo:</span></span><br></pre></td></tr></table></figure>
+<blockquote class="note warn"><strong class="note-title">缩进</strong><p>YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。</p>
+</blockquote>
+<h2 id="Git" class="article-heading"><a href="#Git" class="headerlink" title="Git"></a>Git<a class="article-anchor" href="#Git" aria-hidden="true"></a></h2><p>安装 <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>修改配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment">#https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">[branch]</span> <span class="comment">#published</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repo</code></td>
+<td>库（Repository）地址</td>
+</tr>
+<tr>
+<td><code>branch</code></td>
+<td>分支名称。如果不指定，则默认值为 master</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>自定义提交信息 (默认为 <code>Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>生成站点文件并推送至远程库。执行 <code>hexo clean &amp;&amp; hexo deploy</code> 命令（如果您并未全局安装 Hexo Cli，则需要执行 <code>./node_modules/.bin/hexo clean &amp;&amp; ./node_modules/.bin/hexo deploy</code>）</p>
+<p>登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为<code>_config.yml</code>配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。</p>
+<h3 id="这一切是如何发生的？" class="article-heading"><a href="#这一切是如何发生的？" class="headerlink" title="这一切是如何发生的？"></a>这一切是如何发生的？<a class="article-anchor" href="#这一切是如何发生的？" aria-hidden="true"></a></h3><p>当执行 <code>hexo deploy</code> 时，Hexo 会将 <code>public</code> 目录中的文件和目录推送至 <code>_config.yml</code> 中指定的远端仓库和分支中，并且<strong>完全覆盖</strong>该分支下的已有内容。</p>
+<blockquote class="note warn"><strong class="note-title">For 使用 Git 管理站点目录的用户</strong><p>由于 Hexo 的部署默认使用分支 <code>master</code>，所以如果你同时正在使用 Git 管理你的站点目录，你应当注意你的部署分支应当不同于写作分支。<br>一个好的实践是将站点目录和 Pages 分别存放在两个不同的 Git 仓库中，可以有效避免相互覆盖。<br>Hexo 在部署你的站点生成的文件时并不会更新你的站点目录。因此你应该手动提交并推送你的写作分支。</p>
+</blockquote>
+<p>此外，如果您的 Github Pages 需要使用 CNAME 文件<strong>自定义域名</strong>，请将 CNAME 文件置于 <code>source</code> 目录下，只有这样 <code>hexo deploy</code> 才能将 CNAME 文件一并推送至部署分支。</p>
+<h2 id="Heroku" class="article-heading"><a href="#Heroku" class="headerlink" title="Heroku"></a>Heroku<a class="article-anchor" href="#Heroku" aria-hidden="true"></a></h2><p>安装 <a href="https://github.com/hexojs/hexo-deployer-heroku" target="_blank" rel="noopener">hexo-deployer-heroku</a>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-heroku --save</span><br></pre></td></tr></table></figure>
+<p>修改配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">heroku</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repo</code></td>
+<td>Heroku 库（Repository）地址</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>自定提交信息 (默认为 <code>Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Netlify" class="article-heading"><a href="#Netlify" class="headerlink" title="Netlify"></a>Netlify<a class="article-anchor" href="#Netlify" aria-hidden="true"></a></h2><p><a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a> 是一个提供网络托管的综合平台。它集持续集成（CI）CDN 自定义域名 HTTPS 持续部署（CD）等诸多功能于一身。您可以通过以下两种方式将Hexo站点部署到Netlify。</p>
+<p>首先，也是最通用的方式，就是使用Netlify提供的网页端用户界面。前往<a href="https://app.netlify.com/start" target="_blank" rel="noopener">新建一个网站页面</a>，选择需要关联的 Github/BitBucket/Gitlab 库，然后遵循网站提示。</p>
+<p>另一种方式是使用Netlify提供的命令行客户端工具 <a href="https://www.netlify.com/docs/cli/" target="_blank" rel="noopener">Node based CLI</a> 管理和部署您的站点。</p>
+<p>此外，您还可以在项目的README中增加一个 <a href="https://www.netlify.com/docs/deploy-button/" target="_blank" rel="noopener">部署至Netlify按钮</a>，这样其他用户在fork或clone了您的项目之后可以方便快捷地一键部署。</p>
+<h2 id="Rsync" class="article-heading"><a href="#Rsync" class="headerlink" title="Rsync"></a>Rsync<a class="article-anchor" href="#Rsync" aria-hidden="true"></a></h2><p>安装 <a href="https://github.com/hexojs/hexo-deployer-rsync" target="_blank" rel="noopener">hexo-deployer-rsync</a>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-rsync --save</span><br></pre></td></tr></table></figure>
+<p>修改配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">&lt;root&gt;</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">delete:</span> <span class="string">[true|false]</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="string">[true|false]</span></span><br><span class="line">  <span class="attr">ignore_errors:</span> <span class="string">[true|false]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>远程主机的地址</td>
+<td></td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>使用者名称</td>
+<td></td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>远程主机的根目录</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>端口</td>
+<td>22</td>
+</tr>
+<tr>
+<td><code>delete</code></td>
+<td>删除远程主机上的旧文件</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>显示调试信息</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>ignore_errors</code></td>
+<td>忽略错误</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="note info"><strong class="note-title">rsync部署模块的工作方式</strong><p>需要注意的是，要求您提供的实际上是一个能通过SSH登陆远程主机的Linux用户。Hexo会自动处理关于rsync使用的一切操作。因此，您需要在远程主机上为您的Hexo站点建立一个用户，并允许其通过SSH登陆。不过，这里的<code>port</code>，的确是指rsync监听的端口，请确保防火墙打开了该端口。</p>
+</blockquote>
+<h2 id="OpenShift" class="article-heading"><a href="#OpenShift" class="headerlink" title="OpenShift"></a>OpenShift<a class="article-anchor" href="#OpenShift" aria-hidden="true"></a></h2><p>安装 <a href="https://github.com/hexojs/hexo-deployer-openshift" target="_blank" rel="noopener">hexo-deployer-openshift</a>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-openshift --save</span><br></pre></td></tr></table></figure>
+<p>修改配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">openshift</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>repo</code></td>
+<td>OpenShift 库（Repository）地址</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>自定提交信息 (默认为 <code>Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="FTPSync" class="article-heading"><a href="#FTPSync" class="headerlink" title="FTPSync"></a>FTPSync<a class="article-anchor" href="#FTPSync" aria-hidden="true"></a></h2><p>安装 <a href="https://github.com/hexojs/hexo-deployer-ftpsync" target="_blank" rel="noopener">hexo-deployer-ftpsync</a>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-ftpsync --save</span><br></pre></td></tr></table></figure>
+<p>修改配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">ftpsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">pass:</span> <span class="string">&lt;password&gt;</span></span><br><span class="line">  <span class="attr">remote:</span> <span class="string">[remote]</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">ignore:</span> <span class="string">[ignore]</span></span><br><span class="line">  <span class="attr">connections:</span> <span class="string">[connections]</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="string">[true|false]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>远程主机的地址</td>
+<td></td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>使用者名称</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td>密码</td>
+<td></td>
+</tr>
+<tr>
+<td><code>remote</code></td>
+<td>远程主机的根目录</td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>端口</td>
+<td>21</td>
+</tr>
+<tr>
+<td><code>ignore</code></td>
+<td>忽略的文件或目录</td>
+<td></td>
+</tr>
+<tr>
+<td><code>connections</code></td>
+<td>使用的连接数</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>显示调试信息</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="note warn"><strong class="note-title">FTP部署可能出现的问题</strong><p>您可能需要预先通过其他方式将所有文件上传到远程主机中。否则初次使用ftpsync插件就可能出现报错。另外，由于FTP协议的特征，它每传送一个文件就需要一次握手，相对速度较慢。</p>
+</blockquote>
+<h2 id="SFTP" class="article-heading"><a href="#SFTP" class="headerlink" title="SFTP"></a>SFTP<a class="article-anchor" href="#SFTP" aria-hidden="true"></a></h2><p>安装 <a href="https://github.com/lucascaro/hexo-deployer-sftp" target="_blank" rel="noopener">hexo-deployer-sftp</a>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-sftp --save</span><br></pre></td></tr></table></figure>
+<p>修改配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">sftp</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">pass:</span> <span class="string">&lt;password&gt;</span></span><br><span class="line">  <span class="attr">remotePath:</span> <span class="string">[remote</span> <span class="string">path]</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">privateKey:</span> <span class="string">[path/to/privateKey]</span></span><br><span class="line">  <span class="attr">passphrase:</span> <span class="string">[passphrase]</span></span><br><span class="line">  <span class="attr">agent:</span> <span class="string">[path/to/agent/socket]</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>host</code></td>
+<td>远程主机的地址</td>
+<td></td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>使用者名称</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td>密码</td>
+<td></td>
+</tr>
+<tr>
+<td><code>remotePath</code></td>
+<td>远程主机的根目录</td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>端口</td>
+<td>22</td>
+</tr>
+<tr>
+<td><code>privateKey</code></td>
+<td>ssh私钥的目录地址</td>
+<td></td>
+</tr>
+<tr>
+<td><code>passphrase</code></td>
+<td>（可省略）ssh私钥的密码短语</td>
+<td></td>
+</tr>
+<tr>
+<td><code>agent</code></td>
+<td>ssh套接字的目录地址</td>
+<td><code>$SSH_AUTH_SOCK</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="其他方法" class="article-heading"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法<a class="article-anchor" href="#其他方法" aria-hidden="true"></a></h2><p>Hexo 生成的所有文件都放在 <code>public</code> 文件夹中，您可以将它们复制到您喜欢的地方。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-18T03:04:32.675Z" itemprop="dateModified">上次更新：2019-11-18</time>
+                <a href="generating.html" class="article-footer-prev" title="生成器"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="permalinks.html" class="article-footer-next" title="永久链接"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#这一切是如何发生的？"><span class="toc-text">这一切是如何发生的？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Heroku"><span class="toc-text">Heroku</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Netlify"><span class="toc-text">Netlify</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rsync"><span class="toc-text">Rsync</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenShift"><span class="toc-text">OpenShift</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FTPSync"><span class="toc-text">FTPSync</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SFTP"><span class="toc-text">SFTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他方法"><span class="toc-text">其他方法</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="setup.html" class="sidebar-link">建站</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">命令</a><a href="migration.html" class="sidebar-link">迁移</a></details></strong><strong class="sidebar-title"><details open><summary>基本操作</summary><a href="writing.html" class="sidebar-link first">写作</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">标签插件</a><a href="asset-folders.html" class="sidebar-link">资源文件夹</a><a href="data-files.html" class="sidebar-link">数据文件夹</a><a href="server.html" class="sidebar-link">服务器</a><a href="generating.html" class="sidebar-link">生成器</a><a href="deployment.html" class="sidebar-link current">部署</a></details></strong><strong class="sidebar-title"><details><summary>自定义</summary><a href="permalinks.html" class="sidebar-link first">永久链接</a><a href="themes.html" class="sidebar-link">主题</a><a href="templates.html" class="sidebar-link">模版</a><a href="variables.html" class="sidebar-link">变量</a><a href="helpers.html" class="sidebar-link">辅助函数</a><a href="internationalization.html" class="sidebar-link">国际化 (i18n)</a><a href="plugins.html" class="sidebar-link">插件</a></details></strong><strong class="sidebar-title"><details><summary>其他</summary><a href="troubleshooting.html" class="sidebar-link first">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/docs/" class="mobile-nav-link">文档</a><a href="/ubuntu/" class="mobile-nav-link">ubuntu</a><a href="/stm/" class="mobile-nav-link">STM</a><a href="/web/" class="mobile-nav-link">Web</a><a href="/database/" class="mobile-nav-link">Database</a><a href="/AI/" class="mobile-nav-link">AI</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="setup.html" class="mobile-nav-link">建站</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="commands.html" class="mobile-nav-link">命令</a><a href="migration.html" class="mobile-nav-link">迁移</a></details></strong><strong class="mobile-nav-title"><details open><summary>基本操作</summary><a href="writing.html" class="mobile-nav-link first">写作</a><a href="front-matter.html" class="mobile-nav-link">Front-matter</a><a href="tag-plugins.html" class="mobile-nav-link">标签插件</a><a href="asset-folders.html" class="mobile-nav-link">资源文件夹</a><a href="data-files.html" class="mobile-nav-link">数据文件夹</a><a href="server.html" class="mobile-nav-link">服务器</a><a href="generating.html" class="mobile-nav-link">生成器</a><a href="deployment.html" class="mobile-nav-link current">部署</a></details></strong><strong class="mobile-nav-title"><details><summary>自定义</summary><a href="permalinks.html" class="mobile-nav-link first">永久链接</a><a href="themes.html" class="mobile-nav-link">主题</a><a href="templates.html" class="mobile-nav-link">模版</a><a href="variables.html" class="mobile-nav-link">变量</a><a href="helpers.html" class="mobile-nav-link">辅助函数</a><a href="internationalization.html" class="mobile-nav-link">国际化 (i18n)</a><a href="plugins.html" class="mobile-nav-link">插件</a></details></strong><strong class="mobile-nav-title"><details><summary>其他</summary><a href="troubleshooting.html" class="mobile-nav-link first">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>

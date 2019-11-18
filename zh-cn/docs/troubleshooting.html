@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>问题解答 | Khadas Docs</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://docs.khadas.com/zh-cn/docs/troubleshooting.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="https://docs.khadas.com/docs/troubleshooting.html">
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://docs.khadas.com/zh-cn/docs/troubleshooting.html">
+    
+  
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+  <style>
+    .pace .pace-progress {
+       background: #1E92FB;
+       height: 2px;
+     }
+    .pace .pace-progress-inner {
+       box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+     }
+    .pace .pace-activity {
+       border-top-color: #1E92FB;
+       border-left-color: #1E92FB;
+    }
+  </style>
+  <!-- Icon -->
+  <link rel="Shortcut Icon" href="/images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/vendor/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/vendor/semantic/dist/semantic.min.js"></script>
+ <!-- Hotjar Tracking Code for https://docs.khadas.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1081538,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <!-- Open Graph -->
+  <meta name="description" content="在使用 Hexo 时，您可能会遇到一些问题，下列的常见问题解答可能会对您有所帮助。如果您在这里找不到解答，可以在 GitHub 或 Google Group 上提问。 YAML 解析错误JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:      last_updated: L">
+<meta property="og:type" content="website">
+<meta property="og:title" content="问题解答">
+<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;zh-cn&#x2F;docs&#x2F;troubleshooting.html">
+<meta property="og:site_name" content="Khadas Docs">
+<meta property="og:description" content="在使用 Hexo 时，您可能会遇到一些问题，下列的常见问题解答可能会对您有所帮助。如果您在这里找不到解答，可以在 GitHub 或 Google Group 上提问。 YAML 解析错误JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:      last_updated: L">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:modified_time" content="2019-11-18T03:04:32.675Z">
+<meta property="article:author" content="Khadas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="khadas_official">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110196417-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/docs/" class="main-nav-link">文档</a><a href="/ubuntu/" class="main-nav-link">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link">AI</a>
+      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="en">English</option>
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">问题解答</h1>
+                <a href="https://github.com/khadas/khadas_docs/edit/master/source/zh-cn/docs/troubleshooting.md" target="_blank" rel="noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>在使用 Hexo 时，您可能会遇到一些问题，下列的常见问题解答可能会对您有所帮助。如果您在这里找不到解答，可以在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a> 或 <a href="https://groups.google.com/group/hexo" target="_blank" rel="noopener">Google Group</a> 上提问。</p>
+<h2 id="YAML-解析错误" class="article-heading"><a href="#YAML-解析错误" class="headerlink" title="YAML 解析错误"></a>YAML 解析错误<a class="article-anchor" href="#YAML-解析错误" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:</span><br><span class="line">      last_updated: Last updated: %s</span><br></pre></td></tr></table></figure>
+<p>如果 YAML 字符串中包含冒号（<code>:</code>）的话，请加上引号。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">JS-YAML: bad indentation of a mapping entry at line 18, column 31:</span><br><span class="line">      last_updated:&quot;Last updated: %s&quot;</span><br></pre></td></tr></table></figure>
+<p>请确认您使用空格进行缩进（Soft tab），并确认冒号后有加上一个空格。</p>
+<p>您可参阅 <a href="http://www.yaml.org/spec/1.2/spec.html" target="_blank" rel="noopener">YAML 规范</a> 以取得更多信息。</p>
+<h2 id="EMFILE-错误" class="article-heading"><a href="#EMFILE-错误" class="headerlink" title="EMFILE 错误"></a>EMFILE 错误<a class="article-anchor" href="#EMFILE-错误" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Error: EMFILE, too many open files</span><br></pre></td></tr></table></figure>
+<p>虽然 Node.js 有非阻塞 I/O，同步 I/O 的数量仍被系统所限制，在生成大量静态文件的时候，您可能会碰到 EMFILE 错误，您可以尝试提高同步 I/O 的限制数量来解决此问题。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">ulimit</span> -n 10000</span><br></pre></td></tr></table></figure>
+<p>（这一命令只对Linux系统有效）</p>
+<h2 id="Git-部署问题" class="article-heading"><a href="#Git-部署问题" class="headerlink" title="Git 部署问题"></a>Git 部署问题<a class="article-anchor" href="#Git-部署问题" aria-hidden="true"></a></h2><h3 id="RPC-failed" class="article-heading"><a href="#RPC-failed" class="headerlink" title="RPC failed"></a>RPC failed<a class="article-anchor" href="#RPC-failed" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">error: RPC failed; result=22, HTTP code = 403</span><br><span class="line"></span><br><span class="line">fatal: &apos;username.github.io&apos; does not appear to be a git repository</span><br></pre></td></tr></table></figure>
+<p>请确认您已经在电脑上 <a href="https://help.github.com/articles/set-up-git" target="_blank" rel="noopener">配置 git</a>，或改用 HTTPS 库（repository）地址。</p>
+<h3 id="Error-ENOENT-no-such-file-or-directory" class="article-heading"><a href="#Error-ENOENT-no-such-file-or-directory" class="headerlink" title="Error: ENOENT: no such file or directory"></a>Error: ENOENT: no such file or directory<a class="article-anchor" href="#Error-ENOENT-no-such-file-or-directory" aria-hidden="true"></a></h3><p>如果你遇到了这个错误，有可能是你的文件名、分类或者标签的名字混淆了大写和小写，你可以尝试检查每一个标签和分类的名称，是否大小写一致来修复这一问题。</p>
+<h2 id="服务器问题" class="article-heading"><a href="#服务器问题" class="headerlink" title="服务器问题"></a>服务器问题<a class="article-anchor" href="#服务器问题" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Error: listen EADDRINUSE</span><br></pre></td></tr></table></figure>
+<p>您可能同时开启两个 Hexo 服务器，或者有其他应用程序正在占用相同的端口，请尝试修改 <code>port</code> 参数，或是在启动 Hexo 服务器时加上 <code>-p</code> 选项。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server -p 5000</span><br></pre></td></tr></table></figure>
+<h2 id="插件安装问题" class="article-heading"><a href="#插件安装问题" class="headerlink" title="插件安装问题"></a>插件安装问题<a class="article-anchor" href="#插件安装问题" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm ERR! node-waf configure build</span><br></pre></td></tr></table></figure>
+<p>当您尝试安装以 C/C++ 或其他非 JavaScript 语言所编写的插件时，可能会遇到此类问题，请确认您已经在电脑上安装相对应的编译器。</p>
+<h2 id="DTrace-错误-（Mac-OS-X）" class="article-heading"><a href="#DTrace-错误-（Mac-OS-X）" class="headerlink" title="DTrace 错误 （Mac OS X）"></a>DTrace 错误 （Mac OS X）<a class="article-anchor" href="#DTrace-错误-（Mac-OS-X）" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123; [Error: Cannot find module &apos;./build/Release/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; &#125;</span><br><span class="line">&#123; [Error: Cannot find module &apos;./build/default/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; &#125;</span><br><span class="line">&#123; [Error: Cannot find module &apos;./build/Debug/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; &#125;</span><br></pre></td></tr></table></figure>
+<p>DTrace 安装可能有错误 , 使用下列命令:<br><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ npm install hexo --no-optional</span><br></pre></td></tr></table></figure><br>参考 <a href="https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796" target="_blank" rel="noopener">#1326</a></p>
+<h2 id="在-Jade-或-Swig-遍历资料" class="article-heading"><a href="#在-Jade-或-Swig-遍历资料" class="headerlink" title="在 Jade 或 Swig 遍历资料"></a>在 Jade 或 Swig 遍历资料<a class="article-anchor" href="#在-Jade-或-Swig-遍历资料" aria-hidden="true"></a></h2><p>Hexo 使用 <a href="https://github.com/hexojs/warehouse" target="_blank" rel="noopener">Warehouse</a> 存储资料，它不是一般数组所以必须先进行类型转型才能遍历。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% for post in site.posts.toArray() %&#125;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="资料没有更新" class="article-heading"><a href="#资料没有更新" class="headerlink" title="资料没有更新"></a>资料没有更新<a class="article-anchor" href="#资料没有更新" aria-hidden="true"></a></h2><p>有时资料可能没有被更新，或是生成的文件与修改前的相同，您可以尝试清除缓存并再执行一次。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+<h2 id="命令没有执行" class="article-heading"><a href="#命令没有执行" class="headerlink" title="命令没有执行"></a>命令没有执行<a class="article-anchor" href="#命令没有执行" aria-hidden="true"></a></h2><p>如果你除了 <code>hexo help</code>、<code>hexo init</code> 和 <code>hexo version</code> 以外不能执行任何命令、并且你的任何命令都只返回了 <code>hexo help</code> 的内容，这可能是由于 <code>package.json</code> 中缺乏 <code>hexo</code> 字段导致的。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"hexo"</span>: &#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"3.9.0"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="泄露（Escape）内容" class="article-heading"><a href="#泄露（Escape）内容" class="headerlink" title="泄露（Escape）内容"></a>泄露（Escape）内容<a class="article-anchor" href="#泄露（Escape）内容" aria-hidden="true"></a></h2><p>Hexo 使用 <a href="http://mozilla.github.io/nunjucks/" target="_blank" rel="noopener">Nunjucks</a> 来解析文章（旧版本使用 <a href="http://paularmstrong.github.io/swig/" target="_blank" rel="noopener">Swig</a>，两者语法类似），内容若包含 <code>{{ }}</code> 或 <code>{% %}</code> 可能导致解析错误，您可以用 <code>raw</code> 标签包裹来避免潜在问题发生。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">Hello &#123;&#123; sensitive &#125;&#125;</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="ENOSPC-错误-（Linux）" class="article-heading"><a href="#ENOSPC-错误-（Linux）" class="headerlink" title="ENOSPC 错误 （Linux）"></a>ENOSPC 错误 （Linux）<a class="article-anchor" href="#ENOSPC-错误-（Linux）" aria-hidden="true"></a></h2><p>运行 <code>$ hexo server</code> 命令有时会返回这样的错误：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Error: watch ENOSPC ...</span><br></pre></td></tr></table></figure><br>它可以用过运行 <code>$ npm dedupe</code> 来解决，如果不起作用的话，可以尝试在 Linux 终端中运行下列命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p</span><br></pre></td></tr></table></figure><br>这将会提高你能监视的文件数量。</p>
+<h2 id="EMPERM-Error-Windows-Subsystem-for-Linux" class="article-heading"><a href="#EMPERM-Error-Windows-Subsystem-for-Linux" class="headerlink" title="EMPERM Error (Windows Subsystem for Linux)"></a>EMPERM Error (Windows Subsystem for Linux)<a class="article-anchor" href="#EMPERM-Error-Windows-Subsystem-for-Linux" aria-hidden="true"></a></h2><p>在执行 <code>hexo server</code> 后返回如下错误：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Error: watch /path/to/hexo/theme/ EMPERM</span><br></pre></td></tr></table></figure>
+<p>这是由于你使用的 WSL 版本不支持监听文件系统改动。 最新版的 WSL 已经解决了这一问题。</p>
+<p>您也仍然可以通过先使用 <code>hexo g</code> 生成文件然后将其作为静态服务器运行来从 WSL 环境运行服务器：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server -s</span><br></pre></td></tr></table></figure>
+<p>关于 WSL 的这一 Issue 请前往 <a href="https://github.com/Microsoft/BashOnWindows/issues/216" target="_blank" rel="noopener">https://github.com/Microsoft/BashOnWindows/issues/216</a> 查看。目前这一问题已经得到了解决。</p>
+<h2 id="模板渲染错误" class="article-heading"><a href="#模板渲染错误" class="headerlink" title="模板渲染错误"></a>模板渲染错误<a class="article-anchor" href="#模板渲染错误" aria-hidden="true"></a></h2><p>有的时候你在执行 <code>hexo generate</code> 时会返回以下错误信息：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Template render error: (unknown path)</span><br></pre></td></tr></table></figure>
+<p>这表明你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。有可能你的新文章存在这个问题，或者你在修改配置文件时导致了这个错误。</p>
+<p>检查你的 <code>_config.yml</code> 文件中是否漏掉了列表前的空格。你可以查阅 Wikipedia 中 <a href="https://zh.wikipedia.org/wiki/YAML" target="_blank" rel="noopener">YAML</a> 相关页面来学习 YAML 语法。</p>
+<p>这个是错误的：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">hexo-generator-sitemap</span></span><br></pre></td></tr></table></figure>
+<p>正确的应该是这样：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo-generator-feed</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">hexo-generator-sitemap</span></span><br></pre></td></tr></table></figure>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-11-18T03:04:32.675Z" itemprop="dateModified">上次更新：2019-11-18</time>
+                <a href="plugins.html" class="article-footer-prev" title="插件"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="contributing.html" class="article-footer-next" title="贡献"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#YAML-解析错误"><span class="toc-text">YAML 解析错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EMFILE-错误"><span class="toc-text">EMFILE 错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-部署问题"><span class="toc-text">Git 部署问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#RPC-failed"><span class="toc-text">RPC failed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Error-ENOENT-no-such-file-or-directory"><span class="toc-text">Error: ENOENT: no such file or directory</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器问题"><span class="toc-text">服务器问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插件安装问题"><span class="toc-text">插件安装问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DTrace-错误-（Mac-OS-X）"><span class="toc-text">DTrace 错误 （Mac OS X）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在-Jade-或-Swig-遍历资料"><span class="toc-text">在 Jade 或 Swig 遍历资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资料没有更新"><span class="toc-text">资料没有更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令没有执行"><span class="toc-text">命令没有执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泄露（Escape）内容"><span class="toc-text">泄露（Escape）内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ENOSPC-错误-（Linux）"><span class="toc-text">ENOSPC 错误 （Linux）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EMPERM-Error-Windows-Subsystem-for-Linux"><span class="toc-text">EMPERM Error (Windows Subsystem for Linux)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模板渲染错误"><span class="toc-text">模板渲染错误</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title"><details><summary>开始使用</summary><a href="index.html" class="sidebar-link first">概述</a><a href="setup.html" class="sidebar-link">建站</a><a href="configuration.html" class="sidebar-link">配置</a><a href="commands.html" class="sidebar-link">命令</a><a href="migration.html" class="sidebar-link">迁移</a></details></strong><strong class="sidebar-title"><details><summary>基本操作</summary><a href="writing.html" class="sidebar-link first">写作</a><a href="front-matter.html" class="sidebar-link">Front-matter</a><a href="tag-plugins.html" class="sidebar-link">标签插件</a><a href="asset-folders.html" class="sidebar-link">资源文件夹</a><a href="data-files.html" class="sidebar-link">数据文件夹</a><a href="server.html" class="sidebar-link">服务器</a><a href="generating.html" class="sidebar-link">生成器</a><a href="deployment.html" class="sidebar-link">部署</a></details></strong><strong class="sidebar-title"><details><summary>自定义</summary><a href="permalinks.html" class="sidebar-link first">永久链接</a><a href="themes.html" class="sidebar-link">主题</a><a href="templates.html" class="sidebar-link">模版</a><a href="variables.html" class="sidebar-link">变量</a><a href="helpers.html" class="sidebar-link">辅助函数</a><a href="internationalization.html" class="sidebar-link">国际化 (i18n)</a><a href="plugins.html" class="sidebar-link">插件</a></details></strong><strong class="sidebar-title"><details open><summary>其他</summary><a href="troubleshooting.html" class="sidebar-link current first">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a></details></strong>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/khadas/khadas_docs" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/docs/" class="mobile-nav-link">文档</a><a href="/ubuntu/" class="mobile-nav-link">ubuntu</a><a href="/stm/" class="mobile-nav-link">STM</a><a href="/web/" class="mobile-nav-link">Web</a><a href="/database/" class="mobile-nav-link">Database</a><a href="/AI/" class="mobile-nav-link">AI</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/khadas/khadas_docs" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title"><details><summary>开始使用</summary><a href="index.html" class="mobile-nav-link first">概述</a><a href="setup.html" class="mobile-nav-link">建站</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="commands.html" class="mobile-nav-link">命令</a><a href="migration.html" class="mobile-nav-link">迁移</a></details></strong><strong class="mobile-nav-title"><details><summary>基本操作</summary><a href="writing.html" class="mobile-nav-link first">写作</a><a href="front-matter.html" class="mobile-nav-link">Front-matter</a><a href="tag-plugins.html" class="mobile-nav-link">标签插件</a><a href="asset-folders.html" class="mobile-nav-link">资源文件夹</a><a href="data-files.html" class="mobile-nav-link">数据文件夹</a><a href="server.html" class="mobile-nav-link">服务器</a><a href="generating.html" class="mobile-nav-link">生成器</a><a href="deployment.html" class="mobile-nav-link">部署</a></details></strong><strong class="mobile-nav-title"><details><summary>自定义</summary><a href="permalinks.html" class="mobile-nav-link first">永久链接</a><a href="themes.html" class="mobile-nav-link">主题</a><a href="templates.html" class="mobile-nav-link">模版</a><a href="variables.html" class="mobile-nav-link">变量</a><a href="helpers.html" class="mobile-nav-link">辅助函数</a><a href="internationalization.html" class="mobile-nav-link">国际化 (i18n)</a><a href="plugins.html" class="mobile-nav-link">插件</a></details></strong><strong class="mobile-nav-title"><details open><summary>其他</summary><a href="troubleshooting.html" class="mobile-nav-link current first">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a></details></strong>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en">English</option>
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+
+</body>
+</html>
