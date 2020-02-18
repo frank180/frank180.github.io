@@ -60,17 +60,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your servers. $ hexo deploy Before your first deployment, you will have to modify some settin">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Deployment">
-<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;docs&#x2F;deployment.html">
+<meta property="og:url" content="https://docs.khadas.com/docs/deployment.html">
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your servers. $ hexo deploy Before your first deployment, you will have to modify some settin">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-12-11T01:26:45.095Z">
-<meta property="article:modified_time" content="2019-12-11T01:26:45.095Z">
+<meta property="article:published_time" content="2020-02-18T02:35:18.736Z">
+<meta property="article:modified_time" content="2020-02-18T02:35:18.736Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -97,7 +97,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/docs/" class="main-nav-link current">Docs</a><a href="/ubuntu/" class="main-nav-link">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link">AI</a>
-      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -132,7 +132,7 @@
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">Deployment</h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/docs/deployment.md" target="_blank" rel="noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/docs/deployment.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <p>Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your servers.</p>
@@ -142,7 +142,7 @@
 <p>You can use multiple deployers. Hexo will execute each deployer in order.</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">heroku</span></span><br><span class="line">  <span class="attr">repo:</span></span><br></pre></td></tr></table></figure>
 <h2 id="Git" class="article-heading"><a href="#Git" class="headerlink" title="Git"></a>Git<a class="article-anchor" href="#Git" aria-hidden="true"></a></h2><ol>
-<li>Install <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>.</li>
+<li>Install <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a>.</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <ol start="2">
@@ -176,7 +176,7 @@
 <li>On Github/BitBucket/Gitlab go to your repository settings and change your main branch from <code>master</code> to <code>published</code> (or whatever you called it in your _config.yml). Now your site will show as your account’s homepage.</li>
 </ol>
 <h3 id="How-does-it-work-exactly" class="article-heading"><a href="#How-does-it-work-exactly" class="headerlink" title="How does it work exactly?"></a>How does it work exactly?<a class="article-anchor" href="#How-does-it-work-exactly" aria-hidden="true"></a></h3><p>Your repository will have a <strong>master</strong> branch when you first made it. Keep working on this branch to create your site. When you deploy Hexo will create, or update, a new branch on the remote site (called <strong>published</strong> in the config above). Deployment won’t create a new branch locally, nor will it mess with your existing source code in the master branch locally or on the remote. You still need to keep pushing commits to the master branch manually to the remote server to keep your site backed up. In addition, if you are using a CNAME file to customize your Github Pages domain name, you need to put the CNAME file under <code>source_dir</code> so that Hexo can push it to the published branch.</p>
-<h2 id="Heroku" class="article-heading"><a href="#Heroku" class="headerlink" title="Heroku"></a>Heroku<a class="article-anchor" href="#Heroku" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-heroku" target="_blank" rel="noopener">hexo-deployer-heroku</a>.</p>
+<h2 id="Heroku" class="article-heading"><a href="#Heroku" class="headerlink" title="Heroku"></a>Heroku<a class="article-anchor" href="#Heroku" aria-hidden="true"></a></h2><p>Install <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-heroku">hexo-deployer-heroku</a>.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-heroku --save</span><br></pre></td></tr></table></figure>
 <p>Edit settings.</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">heroku</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
@@ -198,11 +198,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="Netlify" class="article-heading"><a href="#Netlify" class="headerlink" title="Netlify"></a>Netlify<a class="article-anchor" href="#Netlify" aria-hidden="true"></a></h2><p><a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a> provides continuous deployment (Git-triggered builds), an intelligent global CDN, full DNS (including custom domains), automated HTTPS, asset acceleration, and a lot more. It is a unified platform that automates your code to create high-performant, easily maintainable sites and web apps.</p>
-<p>There are two different ways to deploy your sites on Netlify. The most common way is to use the web UI. Go to the <a href="https://app.netlify.com/start" target="_blank" rel="noopener">create a new site page</a>, select your project repo from GitHub, GitLab, or Bitbucket, and follow the prompts.</p>
-<p>Alternatively, you can use Netlify’s <a href="https://www.netlify.com/docs/cli/" target="_blank" rel="noopener">Node based CLI</a> tool to manage and deploy sites on Netlify without leaving your terminal.</p>
-<p>You can also add a <a href="https://www.netlify.com/docs/deploy-button/" target="_blank" rel="noopener">Deploy to Netlify Button</a> in your README.file to allow others to create a copy of your repository and be deployed to Netlify via one click.</p>
-<h2 id="Rsync" class="article-heading"><a href="#Rsync" class="headerlink" title="Rsync"></a>Rsync<a class="article-anchor" href="#Rsync" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-rsync" target="_blank" rel="noopener">hexo-deployer-rsync</a>.</p>
+<h2 id="Netlify" class="article-heading"><a href="#Netlify" class="headerlink" title="Netlify"></a>Netlify<a class="article-anchor" href="#Netlify" aria-hidden="true"></a></h2><p><a target="_blank" rel="noopener" href="https://www.netlify.com/">Netlify</a> provides continuous deployment (Git-triggered builds), an intelligent global CDN, full DNS (including custom domains), automated HTTPS, asset acceleration, and a lot more. It is a unified platform that automates your code to create high-performant, easily maintainable sites and web apps.</p>
+<p>There are two different ways to deploy your sites on Netlify. The most common way is to use the web UI. Go to the <a target="_blank" rel="noopener" href="https://app.netlify.com/start">create a new site page</a>, select your project repo from GitHub, GitLab, or Bitbucket, and follow the prompts.</p>
+<p>Alternatively, you can use Netlify’s <a target="_blank" rel="noopener" href="https://www.netlify.com/docs/cli/">Node based CLI</a> tool to manage and deploy sites on Netlify without leaving your terminal.</p>
+<p>You can also add a <a target="_blank" rel="noopener" href="https://www.netlify.com/docs/deploy-button/">Deploy to Netlify Button</a> in your README.file to allow others to create a copy of your repository and be deployed to Netlify via one click.</p>
+<h2 id="Rsync" class="article-heading"><a href="#Rsync" class="headerlink" title="Rsync"></a>Rsync<a class="article-anchor" href="#Rsync" aria-hidden="true"></a></h2><p>Install <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-rsync">hexo-deployer-rsync</a>.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-rsync --save</span><br></pre></td></tr></table></figure>
 <p>Edit settings.</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">rsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">root:</span> <span class="string">&lt;root&gt;</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">delete:</span> <span class="string">[true|false]</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="string">[true|false]</span></span><br><span class="line">  <span class="attr">ignore_errors:</span> <span class="string">[true|false]</span></span><br></pre></td></tr></table></figure>
@@ -249,7 +249,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="OpenShift" class="article-heading"><a href="#OpenShift" class="headerlink" title="OpenShift"></a>OpenShift<a class="article-anchor" href="#OpenShift" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-openshift" target="_blank" rel="noopener">hexo-deployer-openshift</a>.</p>
+<h2 id="OpenShift" class="article-heading"><a href="#OpenShift" class="headerlink" title="OpenShift"></a>OpenShift<a class="article-anchor" href="#OpenShift" aria-hidden="true"></a></h2><p>Install <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-openshift">hexo-deployer-openshift</a>.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-openshift --save</span><br></pre></td></tr></table></figure>
 <p>Edit settings.</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">openshift</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">[message]</span></span><br></pre></td></tr></table></figure>
@@ -271,7 +271,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="FTPSync" class="article-heading"><a href="#FTPSync" class="headerlink" title="FTPSync"></a>FTPSync<a class="article-anchor" href="#FTPSync" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/hexojs/hexo-deployer-ftpsync" target="_blank" rel="noopener">hexo-deployer-ftpsync</a>.</p>
+<h2 id="FTPSync" class="article-heading"><a href="#FTPSync" class="headerlink" title="FTPSync"></a>FTPSync<a class="article-anchor" href="#FTPSync" aria-hidden="true"></a></h2><p>Install <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-ftpsync">hexo-deployer-ftpsync</a>.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-ftpsync --save</span><br></pre></td></tr></table></figure>
 <p>Edit settings.</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">ftpsync</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">pass:</span> <span class="string">&lt;password&gt;</span></span><br><span class="line">  <span class="attr">remote:</span> <span class="string">[remote]</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">ignore:</span> <span class="string">[ignore]</span></span><br><span class="line">  <span class="attr">connections:</span> <span class="string">[connections]</span></span><br><span class="line">  <span class="attr">verbose:</span> <span class="string">[true|false]</span></span><br></pre></td></tr></table></figure>
@@ -322,7 +322,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="SFTP" class="article-heading"><a href="#SFTP" class="headerlink" title="SFTP"></a>SFTP<a class="article-anchor" href="#SFTP" aria-hidden="true"></a></h2><p>Install <a href="https://github.com/lucascaro/hexo-deployer-sftp" target="_blank" rel="noopener">hexo-deployer-sftp</a>. Deploys the site via SFTP, allowing for passwordless connections using ssh-agent.</p>
+<h2 id="SFTP" class="article-heading"><a href="#SFTP" class="headerlink" title="SFTP"></a>SFTP<a class="article-anchor" href="#SFTP" aria-hidden="true"></a></h2><p>Install <a target="_blank" rel="noopener" href="https://github.com/lucascaro/hexo-deployer-sftp">hexo-deployer-sftp</a>. Deploys the site via SFTP, allowing for passwordless connections using ssh-agent.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-sftp --save</span><br></pre></td></tr></table></figure>
 <p>Edit settings.</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">sftp</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">&lt;host&gt;</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">&lt;user&gt;</span></span><br><span class="line">  <span class="attr">pass:</span> <span class="string">&lt;password&gt;</span></span><br><span class="line">  <span class="attr">remotePath:</span> <span class="string">[remote</span> <span class="string">path]</span></span><br><span class="line">  <span class="attr">port:</span> <span class="string">[port]</span></span><br><span class="line">  <span class="attr">privateKey:</span> <span class="string">[path/to/privateKey]</span></span><br><span class="line">  <span class="attr">passphrase:</span> <span class="string">[passphrase]</span></span><br><span class="line">  <span class="attr">agent:</span> <span class="string">[path/to/agent/socket]</span></span><br></pre></td></tr></table></figure>
@@ -372,9 +372,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="ZEIT-Now" class="article-heading"><a href="#ZEIT-Now" class="headerlink" title="ZEIT Now"></a>ZEIT Now<a class="article-anchor" href="#ZEIT-Now" aria-hidden="true"></a></h2><p><a href="https://zeit.co" target="_blank" rel="noopener">ZEIT Now</a> is a cloud platform for websites and serverless APIs, that you can use to deploy your Hexo site to your personal domain (or a free <code>.now.sh</code> suffixed URL) with just a single command.</p>
+<h2 id="ZEIT-Now" class="article-heading"><a href="#ZEIT-Now" class="headerlink" title="ZEIT Now"></a>ZEIT Now<a class="article-anchor" href="#ZEIT-Now" aria-hidden="true"></a></h2><p><a target="_blank" rel="noopener" href="https://zeit.co">ZEIT Now</a> is a cloud platform for websites and serverless APIs, that you can use to deploy your Hexo site to your personal domain (or a free <code>.now.sh</code> suffixed URL) with just a single command.</p>
 <ol>
-<li>Install <a href="https://zeit.co/download" target="_blank" rel="noopener">Now CLI</a>:</li>
+<li>Install <a target="_blank" rel="noopener" href="https://zeit.co/download">Now CLI</a>:</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm i -g now</span><br></pre></td></tr></table></figure>
 <ol start="2">
@@ -389,7 +389,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-12-11T01:26:45.095Z" itemprop="dateModified">Last updated: 2019-12-11</time>
+                <time class="article-footer-updated" datetime="2020-02-18T02:35:18.736Z" itemprop="dateModified">Last updated: 2020-02-18</time>
                 <a href="generating.html" class="article-footer-prev" title="Generating"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="permalinks.html" class="article-footer-next" title="Permalinks"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -416,7 +416,7 @@
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+      &copy; 2020 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
     </div>
     <div id="footer-links">
       <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>

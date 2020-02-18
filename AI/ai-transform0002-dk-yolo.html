@@ -60,17 +60,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="yolov3模型转换训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c&#x2F;c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在DDK上适配我们的模型。说明: 下面的例子都是以训练好的khadas的物体检测模型为例。 转换工具使用0_import_model.sh参数设置   N">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Khadas Docs">
-<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;AI&#x2F;ai-transform0002-dk-yolo.html">
+<meta property="og:url" content="https://docs.khadas.com/AI/ai-transform0002-dk-yolo.html">
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="yolov3模型转换训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c&#x2F;c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在DDK上适配我们的模型。说明: 下面的例子都是以训练好的khadas的物体检测模型为例。 转换工具使用0_import_model.sh参数设置   N">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-12-11T01:26:45.091Z">
-<meta property="article:modified_time" content="2019-12-11T01:26:45.091Z">
+<meta property="article:published_time" content="2020-02-18T02:35:18.732Z">
+<meta property="article:modified_time" content="2020-02-18T02:35:18.732Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -97,7 +97,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/docs/" class="main-nav-link">Docs</a><a href="/ubuntu/" class="main-nav-link">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link current">AI</a>
-      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -132,7 +132,7 @@
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name"></h1>
-                <a href="https://github.com/khadas/khadas_docs/edit/master/source/AI/ai-transform0002-dk-yolo.md" target="_blank" rel="noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs/edit/master/source/AI/ai-transform0002-dk-yolo.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <h1 id="yolov3模型转换" class="article-heading"><a href="#yolov3模型转换" class="headerlink" title="yolov3模型转换"></a>yolov3模型转换<a class="article-anchor" href="#yolov3模型转换" aria-hidden="true"></a></h1><p>训练完成的模型是基于相应的框架运行的，尽管大部分框架都有c/c++接口，但是即使使用这些接口，仍然只能使用CPU或者GPU，想要使用NPU加速，就需要通过DDK将训练好的模型转换为使用NPU加速的模型代码。这篇文档主要介绍如何在DDK上适配我们的模型。<br><strong>说明</strong>: 下面的例子都是以训练好的khadas的物体检测模型为例。</p>
@@ -194,7 +194,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-12-11T01:26:45.091Z" itemprop="dateModified">Last updated: 2019-12-11</time>
+                <time class="article-footer-updated" datetime="2020-02-18T02:35:18.732Z" itemprop="dateModified">Last updated: 2020-02-18</time>
                 <a href="ai-transform0001-tf-inception.html" class="article-footer-prev" title="inception模型转换"><i class="fa fa-chevron-left"></i><span>Prev</span></a>
               </footer>
               
@@ -203,7 +203,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#yolov3模型转换"><span class="toc-text">yolov3模型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#转换工具使用"><span class="toc-text">转换工具使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-import-model-sh"><span class="toc-text">0_import_model.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-quantize-model-sh"><span class="toc-text">1_quantize_model.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-export-case-code-sh"><span class="toc-text">2_export_case_code.sh</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DDK使用"><span class="toc-text">DDK使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件替换"><span class="toc-text">文件替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件修改"><span class="toc-text">文件修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DDK编译"><span class="toc-text">DDK编译</span></a></li></ol></li></ol></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#yolov3%E6%A8%A1%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">yolov3模型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="toc-text">转换工具使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-import-model-sh"><span class="toc-text">0_import_model.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-quantize-model-sh"><span class="toc-text">1_quantize_model.sh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-export-case-code-sh"><span class="toc-text">2_export_case_code.sh</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DDK%E4%BD%BF%E7%94%A8"><span class="toc-text">DDK使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%9B%BF%E6%8D%A2"><span class="toc-text">文件替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9"><span class="toc-text">文件修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DDK%E7%BC%96%E8%AF%91"><span class="toc-text">DDK编译</span></a></li></ol></li></ol></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
@@ -221,7 +221,7 @@
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+      &copy; 2020 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
     </div>
     <div id="footer-links">
       <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>

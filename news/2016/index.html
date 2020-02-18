@@ -54,12 +54,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="Khadas Docs">
+  <link rel="alternate" href="/atom.xml" title="Khadas Docs" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="Khadas Documentation.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="News">
-<meta property="og:url" content="https:&#x2F;&#x2F;docs.khadas.com&#x2F;news&#x2F;2016&#x2F;index.html">
+<meta property="og:url" content="https://docs.khadas.com/news/2016/index.html">
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="Khadas Documentation.">
 <meta property="og:locale" content="en_US">
@@ -89,7 +89,7 @@
     </h1>
     <nav id="main-nav">
       <a href="/docs/" class="main-nav-link">Docs</a><a href="/ubuntu/" class="main-nav-link">ubuntu</a><a href="/stm/" class="main-nav-link">STM</a><a href="/web/" class="main-nav-link">Web</a><a href="/database/" class="main-nav-link">Database</a><a href="/AI/" class="main-nav-link">AI</a>
-      <a href="https://github.com/khadas/khadas_docs" target="_blank" rel="noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a target="_blank" rel="noopener" href="https://github.com/khadas/khadas_docs" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -131,7 +131,7 @@
     <a href="/news/2016/02/28/hexo-3-2-released/" class="article-date"><time datetime="2016-02-27T16:00:00.000Z">2016-02-28</time></a>
   </header>
   <div class="article-content" itemprop="articleBody">
-    <p>It has been a long time that Hexo is poor at handling large website. (<a href="https://github.com/hexojs/hexo/issues/710" target="_blank" rel="noopener">#710</a>, <a href="https://github.com/hexojs/hexo/issues/1124" target="_blank" rel="noopener">#1124</a>, <a href="https://github.com/hexojs/hexo/issues/283" target="_blank" rel="noopener">#283</a>, <a href="https://github.com/hexojs/hexo/issues/1187" target="_blank" rel="noopener">#1187</a>, <a href="https://github.com/hexojs/hexo/issues/550" target="_blank" rel="noopener">#550</a>, <a href="https://github.com/hexojs/hexo/issues/1769" target="_blank" rel="noopener">#1769</a>, etc.) We tried hard to solve this problem and there’re several improvements in Hexo 3.2.</p>
+    <p>It has been a long time that Hexo is poor at handling large website. (<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/710">#710</a>, <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/1124">#1124</a>, <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/283">#283</a>, <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/1187">#1187</a>, <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/550">#550</a>, <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/1769">#1769</a>, etc.) We tried hard to solve this problem and there’re several improvements in Hexo 3.2.</p>
 <h2 id="It’s-all-about-speed" class="article-heading"><a href="#It’s-all-about-speed" class="headerlink" title="It’s all about speed"></a>It’s all about speed<a class="article-anchor" href="#It’s-all-about-speed" aria-hidden="true"></a></h2><h3 id="Caching-rendered-contents" class="article-heading"><a href="#Caching-rendered-contents" class="headerlink" title="Caching rendered contents"></a>Caching rendered contents<a class="article-anchor" href="#Caching-rendered-contents" aria-hidden="true"></a></h3><p>Rendered contents are cached in the warehouse. This saves a lot of time and made hot processing (2nd-time processing) <strong>1.7x faster</strong>.</p>
 <table>
 <thead>
@@ -154,7 +154,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="Lazy-load-language-files-of-highlight-js" class="article-heading"><a href="#Lazy-load-language-files-of-highlight-js" class="headerlink" title="Lazy load language files of highlight.js"></a>Lazy load language files of highlight.js<a class="article-anchor" href="#Lazy-load-language-files-of-highlight-js" aria-hidden="true"></a></h3><p><a href="https://github.com/hexojs/hexo/issues/1036" target="_blank" rel="noopener">highlight.js is slow</a>. Especially when it try to detect the language. Lazy load language files make processing faster and don’t have to load bunch of unused language files. However there’re some limitations:</p>
+<h3 id="Lazy-load-language-files-of-highlight-js" class="article-heading"><a href="#Lazy-load-language-files-of-highlight-js" class="headerlink" title="Lazy load language files of highlight.js"></a>Lazy load language files of highlight.js<a class="article-anchor" href="#Lazy-load-language-files-of-highlight-js" aria-hidden="true"></a></h3><p><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/1036">highlight.js is slow</a>. Especially when it try to detect the language. Lazy load language files make processing faster and don’t have to load bunch of unused language files. However there’re some limitations:</p>
 <ul>
 <li>Auto detect must be disabled.</li>
 <li>You have to specify language in code block.</li>
@@ -185,15 +185,15 @@
 </table>
 <p>The following renderers have already supported this feature.</p>
 <ul>
-<li><a href="https://github.com/hexojs/hexo-renderer-ejs" target="_blank" rel="noopener">hexo-renderer-ejs</a></li>
-<li><a href="https://github.com/hexojs/hexo-renderer-jade" target="_blank" rel="noopener">hexo-renderer-jade</a></li>
-<li><a href="https://github.com/hexojs/hexo-renderer-swig" target="_blank" rel="noopener">hexo-renderer-swig</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-ejs">hexo-renderer-ejs</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-jade">hexo-renderer-jade</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-swig">hexo-renderer-swig</a></li>
 </ul>
 <p>And it’s easy to implement precompilation for renderers. Just add a <code>compile</code> function to the renderer. Take EJS renderer for example:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ejs = <span class="built_in">require</span>(<span class="string">'ejs'</span>);</span><br><span class="line"><span class="keyword">var</span> assign = <span class="built_in">require</span>(<span class="string">'object-assign'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ejsRenderer</span>(<span class="params">data, locals</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> ejs.render(data.text, assign(&#123;<span class="attr">filename</span>: data.path&#125;, locals));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ejsRenderer.compile = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> ejs.compile(data.text, &#123;</span><br><span class="line">    filename: data.path</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = ejsRenderer;</span><br></pre></td></tr></table></figure>
 <h2 id="Include-exclude-source-files" class="article-heading"><a href="#Include-exclude-source-files" class="headerlink" title="Include/exclude source files"></a>Include/exclude source files<a class="article-anchor" href="#Include-exclude-source-files" aria-hidden="true"></a></h2><p>You can include/exclude specified source files in <code>_config.yml</code>.</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">include:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">.htaccess</span></span><br><span class="line"></span><br><span class="line"><span class="attr">exclude:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">tmp/**/*</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://github.com/hexojs/hexo/releases" target="_blank" rel="noopener">changelog</a>, <a href="https://docs.google.com/spreadsheets/d/1nLW3fPCtrkfMolz8UnUiKq5lqys6bIcZqrfksuvQHA0/edit?usp=sharing" target="_blank" rel="noopener">benchmark results</a>.</p>
+<p>More info: <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/releases">changelog</a>, <a target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/1nLW3fPCtrkfMolz8UnUiKq5lqys6bIcZqrfksuvQHA0/edit?usp=sharing">benchmark results</a>.</p>
 
   </div>
   
@@ -207,7 +207,7 @@
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2019 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
+      &copy; 2020 <a href="https://www.khadas.com/" target="_blank">Khadas</a><br>
     </div>
     <div id="footer-links">
       <a href="https://twitter.com/khadas_official" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
