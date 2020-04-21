@@ -69,8 +69,8 @@
 <meta property="og:site_name" content="Khadas Docs">
 <meta property="og:description" content="如何安装配置TensorFlow开发环境 这篇教程主要介绍如何在Ubuntu18.04上安装TensorFlow开发环境，其他开发环境请参照TensorFlow官方的说明，需要的依赖和本文基本相同。 不使用虚拟环境可以跳过虚拟环境相关的步骤，示例使用python3，使用python2的替换pip工具即可。 安装GPU版本的tensorflow，需要先安装好cuda和cudnn，可参考这里的方式安装">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-18T02:35:18.732Z">
-<meta property="article:modified_time" content="2020-02-18T02:35:18.732Z">
+<meta property="article:published_time" content="2020-04-21T03:34:36.435Z">
+<meta property="article:modified_time" content="2020-04-21T03:34:36.435Z">
 <meta property="article:author" content="Khadas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="khadas_official">
@@ -140,9 +140,9 @@
 <li>不使用虚拟环境可以跳过虚拟环境相关的步骤，示例使用python3，使用python2的替换pip工具即可。</li>
 <li>安装GPU版本的tensorflow，需要先安装好cuda和cudnn，可参考这里的方式安装:<a href="/ubuntu/ubuntu0005-install-nvidia.html">配置和安装cuda&amp;cudnn</a></li>
 </ol>
-<h2 id="基础环境" class="article-heading"><a href="#基础环境" class="headerlink" title="基础环境"></a>基础环境<a class="article-anchor" href="#基础环境" aria-hidden="true"></a></h2><h3 id="更新系统安装基础工具" class="article-heading"><a href="#更新系统安装基础工具" class="headerlink" title="更新系统安装基础工具"></a>更新系统安装基础工具<a class="article-anchor" href="#更新系统安装基础工具" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt upgrade</span><br><span class="line">$ sudo apt install build-essential git wget</span><br></pre></td></tr></table></figure>
+<h2 id="基础环境" class="article-heading"><a href="#基础环境" class="headerlink" title="基础环境"></a>基础环境<a class="article-anchor" href="#基础环境" aria-hidden="true"></a></h2><h3 id="更新系统安装基础工具" class="article-heading"><a href="#更新系统安装基础工具" class="headerlink" title="更新系统安装基础工具"></a>更新系统安装基础工具<a class="article-anchor" href="#更新系统安装基础工具" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt update</span><br><span class="line">$ sudo apt upgrade</span><br><span class="line">$ sudo apt install build-essential git wget </span><br></pre></td></tr></table></figure>
 <h3 id="python开发环境" class="article-heading"><a href="#python开发环境" class="headerlink" title="python开发环境"></a>python开发环境<a class="article-anchor" href="#python开发环境" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo apt install python3-dev python3-pip</span><br></pre></td></tr></table></figure>
-<h3 id="安装虚拟环境工具-推荐使用" class="article-heading"><a href="#安装虚拟环境工具-推荐使用" class="headerlink" title="安装虚拟环境工具(推荐使用)"></a>安装虚拟环境工具(推荐使用)<a class="article-anchor" href="#安装虚拟环境工具-推荐使用" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pip3 install -U virtualenv</span><br></pre></td></tr></table></figure>
+<h3 id="安装虚拟环境工具-推荐使用" class="article-heading"><a href="#安装虚拟环境工具-推荐使用" class="headerlink" title="安装虚拟环境工具(推荐使用)"></a>安装虚拟环境工具(推荐使用)<a class="article-anchor" href="#安装虚拟环境工具-推荐使用" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo pip3 install -U virtualenv </span><br></pre></td></tr></table></figure>
 <h2 id="虚拟环境创建和使用-不使用虚拟环境跳过这部分" class="article-heading"><a href="#虚拟环境创建和使用-不使用虚拟环境跳过这部分" class="headerlink" title="虚拟环境创建和使用(不使用虚拟环境跳过这部分)"></a>虚拟环境创建和使用(不使用虚拟环境跳过这部分)<a class="article-anchor" href="#虚拟环境创建和使用-不使用虚拟环境跳过这部分" aria-hidden="true"></a></h2><p>使用虚拟环境的好处是可以将tensorflow从主机中隔离出来，不会破坏主机的环境，同时安装好的环境不会被其他工具破坏。也可以安装多个版本的tensorflow</p>
 <h3 id="创建虚拟环境" class="article-heading"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境<a class="article-anchor" href="#创建虚拟环境" aria-hidden="true"></a></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ virtualenv --system-site-packages -p python3 /path/to/venv</span><br></pre></td></tr></table></figure>
 <ol>
@@ -172,7 +172,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-02-18T02:35:18.732Z" itemprop="dateModified">Last updated: 2020-02-18</time>
+                <time class="article-footer-updated" datetime="2020-04-21T03:34:36.435Z" itemprop="dateModified">Last updated: 2020-04-21</time>
                 <a href="ai-basic0002-darknet.html" class="article-footer-next" title="Darknet"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
